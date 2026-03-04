@@ -1,0 +1,51 @@
+:root {
+    --header-font: "sans-serif";
+    --body-font: "serif";
+    --main-color: #5D576B;
+}
+
+/************************* GENERAL *************************/
+* {
+    font-family: var(--body-font);
+    box-sizing: border-box;
+}
+
+/************************** HEADER **************************/
+header {
+    display: grid;
+    grid-template-columns: 24px auto 48px;
+    padding: 5px 0 5px 10px;
+    gap: 8px;
+    align-items: center;
+    border-bottom: solid 1px #ddd;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* padding-bottom: 5px; */
+}
+
+header span {
+    font-size: 1.2rem;
+    color: var(--main-color);
+}
+
+/************************ HAMBURGER NAV ************************/
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--main-color);
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::before {
+    content: "\2630";
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
