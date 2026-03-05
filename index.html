@@ -6,15 +6,20 @@
     <title>Home Page</title>
     <meta name="description" content="Home page for WDD231 coursework.">
     <meta name="author" content="Alvin Timaná">
-    <!-- STYLES -->
     <!-- Normalize CSS file -->
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/larger.css">
     <!-- Normalize CSS cloud reference -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> -->
+    <!-- STYLES -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100..900&display=swap" rel="stylesheet">
     <!-- SCRIPTS -->
     <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
 </head>
 <body>
     <header>
@@ -22,14 +27,45 @@
         <span>My Website</span>
         <button id="ham-btn" class="hamburger"></button>
     </header>
-    <nav>
-            
+    <!-- NAVIGATION -->
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="#">Home</a></li>
+            <li><a href="chamber/index.html">Chamber</a></li>
+            <li><a href="final/index.html">Final</a></li>
+        </ul>
     </nav>
     <main>
-
+        <h1>Home</h1>
+        <!-- About Me -->
+        <section>
+            <h2>About Me</h2>
+            <p>My name is Alvin Timaná and I'm from Lima, Peru. My family and I have always lived here. I'm currently studying Software Development at BYU-Idaho through BYU-Pathway. I love visiting new places, learning new things and coding, and I want to become a skilled web and software developer. I also like soccer, video games and watching movies or TV shows with my family.</p>
+        </section>
+        <!-- My Picture -->
+        <section>
+            <h2>Student Photo</h2>
+            <picture>
+                <source media="(min-width: 450px)" srcset="images/profile-m.webp">
+                <img src="images/profile-s.webp" alt="">
+            </picture>
+        </section>
+        <!-- Certificate Courses -->
+        <section class="courses">
+            <h2>Web Certificate Courses</h2>
+            <div id="courses"></div>
+            <p id="credits"></p>
+        </section>
     </main>
     <footer>
-
+        <div class="social">
+            <a href="https://github.com/alpha-lantern/wdd231" target="_blank"><img src="images/github.svg" alt="Github icon" width="32" height="32"></a>
+            <a href="www.linkedin.com/in/alvin-timana" target="_blank"><img src="images/linkedin.svg" alt="Linkedin icon" width="32" height="32"></a>
+            <a href="https://www.facebook.com/alvinjoel.timanasolier/" target="_blank"><img src="images/facebook.svg" alt="Facebook icon" width="32" height="32"></a>
+            <a href="https://www.instagram.com/alvin.timana/" target="_blank"><img src="images/instagram.svg" alt="Instagram icon" width="32" height="32"></a>
+        </div>
+        <p><span id="currentYear"></span> · Alvin Timaná · Lima, Perú</p>
+        <p id="lastModified"></p>
     </footer>
 </body>
 </html>

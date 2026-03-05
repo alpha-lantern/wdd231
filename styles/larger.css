@@ -11,4 +11,30 @@
     .hamburger {
         display: none;
     }
+
+    .navigation {
+        display: block;
+    }
+
+    .navigation ul {
+        display: flex;
+    }
+    
+    .navigation li {
+        flex: 1 1 100%;
+    }
+
+    /************************ MAIN ************************/
+    main {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    main h1 {
+        grid-column: 1 / -1;
+    }
+
+    .courses {
+        grid-column: 1 / -1;
+    }
+
 }

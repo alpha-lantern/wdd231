@@ -1,0 +1,158 @@
+:root {
+    --body-font: "Jost", sans-serif; /* Full weight axis: 100 to 900 // Optional Font: "Crimson Pro", serif; */
+    --main-color: #5D576B;
+    --accent-color1: #b4aeff;
+    --accent-color2: #312d3a;
+    --white: #ffffff;
+}
+
+/************************* GENERAL *************************/
+* {
+    font-family: var(--body-font);
+    box-sizing: border-box;
+}
+
+header, .navigation li {
+    border-bottom: solid 1px #ccc;
+}
+
+main {
+    color: var(--accent-color2);
+}
+
+/************************** HEADER **************************/
+header {
+    display: grid;
+    grid-template-columns: 24px auto 48px;
+    padding: 5px 0 5px 10px;
+    gap: 8px;
+    align-items: center;
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* padding-bottom: 5px; */
+}
+
+header span {
+    font-size: 1.2rem;
+    color: var(--accent-color2);
+    /* font-family: var(--headings-font); */
+}
+
+/************************ HAMBURGER NAV ************************/
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--main-color);
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::before {
+    content: "\2630";
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
+
+/************************ NAVIGATION MENU ************************/
+.navigation {
+    display: none;
+    text-align: center;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    background-color: var(--main-color);
+    margin: 0;
+    padding: 0;
+}
+
+.navigation li {
+    list-style: none;
+}
+
+.navigation li.current {
+    background-color: var(--accent-color2);
+    /* pointer-events: none; */
+}
+
+.navigation a {
+    display: block;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 1rem;
+    color: var(--white);
+}
+
+.navigation a:hover {
+    background-color: var(--accent-color1);
+    color: var(--accent-color2);
+}
+
+/************************ MAIN ************************/
+main, footer {
+    padding: 1rem 10px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+h1 {
+    margin: .5rem 0;
+}
+
+/*********************** SECTIONS ***********************/
+section {
+    border: solid 1px var(--main-color);
+}
+
+section h2, section p {
+    padding: .6rem;
+}
+
+h2 {
+    margin: 0;
+    background-color: var(--main-color);
+    color: var(--white);
+}
+
+section img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/************************ FOOTER ************************/
+footer {
+    background-color: var(--main-color);
+    text-align: center;
+    color: var(--white);
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+}
