@@ -33,8 +33,14 @@
         grid-column: 1 / -1;
     }
 
+    /******************** COURSE SECTION ********************/
     .courses {
         grid-column: 1 / -1;
     }
 
+    #courses .buttons, #courses .cardsContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: .6rem;
+    }
 }

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <meta name="description" content="Home page for WDD231 coursework.">
+    <title>WDD 231 | Alvin Timaná</title>
+    <meta name="description" content="This is my homepage for WDD231 coursework in the Software Development degree program at BYU-Idaho.">
     <meta name="author" content="Alvin Timaná">
     <!-- Normalize CSS file -->
     <link rel="stylesheet" href="styles/normalize.css">
@@ -19,22 +19,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100..900&display=swap" rel="stylesheet">
     <!-- SCRIPTS -->
     <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
     <script src="scripts/dates.js" defer></script>
 </head>
 <body>
+    <!-- HEADER -->
     <header>
         <img src="images/logo.svg" alt="Website Logo" width="1" height="1">
-        <span>My Website</span>
-        <button id="ham-btn" class="hamburger"></button>
+        <span>WDD 231 | Alvin Timaná</span>
+        <button id="ham-btn" class="hamburger" aria-label="Menu"></button>
     </header>
     <!-- NAVIGATION -->
     <nav id="nav-bar" class="navigation">
         <ul>
             <li class="current"><a href="#">Home</a></li>
-            <li><a href="chamber/index.html">Chamber</a></li>
-            <li><a href="final/index.html">Final</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Final</a></li>
         </ul>
     </nav>
+    <!-- MAIN -->
     <main>
         <h1>Home</h1>
         <!-- About Me -->
@@ -46,21 +49,23 @@
         <section>
             <h2>Student Photo</h2>
             <picture>
-                <source media="(min-width: 450px)" srcset="images/profile-m.webp">
-                <img src="images/profile-s.webp" alt="">
+                <source media="(min-width: 400px)" srcset="images/profile-m.webp">
+                <img src="images/profile-s.webp" alt="Photograph of Alvin Timana looking at the landscape." fetchpriority=high>
             </picture>
         </section>
         <!-- Certificate Courses -->
-        <section class="courses">
-            <h2>Web Certificate Courses</h2>
-            <div id="courses"></div>
-            <p id="credits"></p>
+        <section class="courses" id="courses">
+            <h2>Web & Computer Programming Certificate Courses</h2>
+            <div class="buttons"></div>
+            <div class="cardsContainer"></div>
+            <p>The total credits for course listed above is <span id="credits"></span></p>
         </section>
     </main>
+    <!-- FOOTER -->
     <footer>
         <div class="social">
             <a href="https://github.com/alpha-lantern/wdd231" target="_blank"><img src="images/github.svg" alt="Github icon" width="32" height="32"></a>
-            <a href="www.linkedin.com/in/alvin-timana" target="_blank"><img src="images/linkedin.svg" alt="Linkedin icon" width="32" height="32"></a>
+            <a href="https://www.linkedin.com/in/alvin-timana" target="_blank"><img src="images/linkedin.svg" alt="Linkedin icon" width="32" height="32"></a>
             <a href="https://www.facebook.com/alvinjoel.timanasolier/" target="_blank"><img src="images/facebook.svg" alt="Facebook icon" width="32" height="32"></a>
             <a href="https://www.instagram.com/alvin.timana/" target="_blank"><img src="images/instagram.svg" alt="Instagram icon" width="32" height="32"></a>
         </div>
