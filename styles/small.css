@@ -12,12 +12,12 @@
     box-sizing: border-box;
 }
 
-header, .navigation li {
-    border-bottom: solid 1px #ccc;
+body {
+    color: var(--accent-color2);
 }
 
-main {
-    color: var(--accent-color2);
+header, .navigation li {
+    border-bottom: solid 1px #ccc;
 }
 
 /************************** HEADER **************************/
@@ -33,13 +33,11 @@ header img {
     display: block;
     width: 100%;
     height: auto;
-    /* padding-bottom: 5px; */
 }
 
 header span {
     font-size: 1.2rem;
     color: var(--accent-color2);
-    /* font-family: var(--headings-font); */
 }
 
 /************************ HAMBURGER NAV ************************/
@@ -204,4 +202,5 @@ footer {
     align-items: center;
     width: 48px;
     height: 48px;
+    color: var(--white);
 }
