@@ -1,0 +1,23 @@
+{
+    "family_name": "Small",
+    "moved_in_date": "14-04-1987",
+    "number_of_people": 3,
+    "visited_by_bishopric": true,
+    "family_members": [
+        {
+            "name": "Reynold",
+            "gender": "Male",
+            "birthdate": "21-10-1960"
+        },
+        {
+            "name": "Lucy Astrid",
+            "gender": "Female",
+            "birthdate": "15-04-1963"
+        },
+        {
+            "name": "Trey Ethan",
+            "gender": "Male",
+            "birthdate": "02-05-1983"
+        }
+    ]
+}

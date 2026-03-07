@@ -1,0 +1,51 @@
+:root {
+    --titles-font: "Bona Nova", serif; /* Weight: 700 */
+    --body-font: "Jost", sans-serif; /* Full weight axis: 100 to 900 // Optional Font: "Crimson Pro", serif; */
+    --main-color: #4e4661;
+    --accent-color1: #ffffff;
+    --accent-color2: #2a2731;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--accent-color2);
+}
+
+main {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    font-family: var(--titles-font);
+    text-align: center;
+}
+
+#cards p {
+    margin: 0;
+    text-align: center;
+}
+    
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--main-color);
+    border: solid 1px var(--accent-color2);
+    box-shadow: 0 0 15px;
+}
+
+#cards section {
+    border: solid 1px var(--accent-color2);
+    padding: 0 1rem .5rem;
+    align-content: center;
+    background-color: var(--accent-color1);
+}
+
+#cards section img {
+    display: block;
+    margin: .5rem auto;
+    box-shadow: 0 0 10px;
+    max-width: 350px;
+}
