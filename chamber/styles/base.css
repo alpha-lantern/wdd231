@@ -3,6 +3,8 @@
     --primary-color: #0c120c;
     --secondary-color: #9c0010;
     --light-color: #ECEBF3;
+    --silver: #c0c0c0; /* For Silver membership level and header border */
+    --gold: #ffd700; /* For Gold membership level */
 }
 /************************* GENERAL *************************/
 * {
@@ -15,7 +17,7 @@ body {
 }
 
 header, .navigation li {
-    border-bottom: solid 1px #c0c0c0;
+    border-bottom: solid 1px var(--silver);
 }
 
 main, .footer {
@@ -51,6 +53,7 @@ main, .footer {
     width: 48px;
     height: 48px;
 }
+
 /************************ HAMBURGER NAV ************************/
 .hamburger, .dark {
     background: none;
@@ -103,7 +106,7 @@ main, .footer {
     color: var(--light-color);
 }
 
-.navigation a:hover, .views button:hover {
+.navigation a:hover {
     background-color: var(--light-color);
     color: var(--primary-color);
 }
@@ -125,7 +128,8 @@ main, .footer {
 }
 
 .views button.applied {
-    background-color: var(--secondary-color);
+    background-color: var(--light-color);
+    color: var(--primary-color);
     pointer-events: none;
 }
 
@@ -176,12 +180,12 @@ main, .footer {
 
 /**** Silver ****/
 .card.silver {
-    border: solid 2px silver;
+    border: solid 2px var(--silver);
 }
 
 /**** Gold ****/
 .card.gold {
-    border: solid 2px gold;
+    border: solid 2px var(--gold);
 }
 
 /************** LIST DISPLAY **************/
@@ -225,13 +229,6 @@ footer {
 .social {
     display: flex;
     justify-content: center;
-    column-gap: 8px;
-}
-
-.social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 1.5rem;
 }
 
