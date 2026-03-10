@@ -189,11 +189,6 @@ main, .footer {
 }
 
 /************** LIST DISPLAY **************/
-.list {
-    display: flexbox;
-    font-size: 80%;
-}
-
 .list .card {
     /* box-shadow: none; */
     margin: .6rem 0;
