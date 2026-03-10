@@ -1,54 +1,77 @@
 :root {
-    --body-font: "Jost", sans-serif; /* Full weight axis: 100 to 900 // Optional Font: "Crimson Pro", serif; */
-    --main-color: #0c120c;
-    --accent-color1: #ECEBF3;
-    --accent-color2: #C20114;
+    --family-font: "Open Sans", sans-serif; /* Full weight axis: 300 to 800 // Optional Font: "Crimson Pro", serif; */
+    --primary-color: #0c120c;
+    --secondary-color: #9c0010;
     --light-color: #ECEBF3;
 }
 /************************* GENERAL *************************/
 * {
-    font-family: var(--body-font);
+    font-family: var(--family-font);
     box-sizing: border-box;
 }
 
 body {
-    color: var(--main-color);
+    color: var(--primary-color);
 }
 
 header, .navigation li {
-    border-bottom: solid 1px #ccc;
+    border-bottom: solid 1px #c0c0c0;
 }
 
-main, footer {
+main, .footer {
     padding: 1rem .6rem;
 }
 
+.logo-name {
+    font-weight: 600;
+}
+
 /************************** HEADER **************************/
-header {
+.header {
     display: grid;
-    grid-template-columns: 24px auto 48px;
+    grid-template-columns: 24px auto 48px 48px;
     padding: 15px 0 15px 10px;
     gap: 8px;
     align-items: center;
 }
 
-header img {
+.header img {
     display: block;
     width: 100%;
     height: auto;
 }
 
-header span {
+.header span {
     font-size: 1.2rem;
-    color: var(--accent-color2);
+    color: var(--secondary-color);
+}
+
+/************************ DARK MODE BTN ************************/
+.dark, .hamburger {
+    width: 48px;
+    height: 48px;
+}
+
+.dark::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/dark-mode.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.dark.on::before {
+    background-image: url("../images/dark-mode-on.svg");
 }
 
 /************************ HAMBURGER NAV ************************/
-.hamburger {
+.hamburger, .dark {
     background: none;
     border: none;
     font-size: 2rem;
-    color: var(--main-color);
+    color: var(--primary-color);
     cursor: pointer;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -73,7 +96,7 @@ header span {
 }
 
 .navigation ul {
-    background-color: var(--main-color);
+    background-color: var(--primary-color);
     margin: 0;
     padding: 0;
 }
@@ -83,7 +106,7 @@ header span {
 }
 
 .navigation li.current {
-    background-color: var(--accent-color2);
+    background-color: var(--secondary-color);
     /* pointer-events: none; */
 }
 
@@ -97,7 +120,7 @@ header span {
 
 .navigation a:hover, .views button:hover {
     background-color: var(--light-color);
-    color: var(--main-color);
+    color: var(--primary-color);
 }
 
 /************************* MAIN *************************/
@@ -110,14 +133,14 @@ header span {
     width: 100%;
     height: 48px;
     cursor: pointer;
-    background-color: var(--main-color);
+    background-color: var(--primary-color);
     color: var(--light-color);
     font-weight: 600;
     border: none;
 }
 
 .views button.applied {
-    background-color: var(--accent-color2);
+    background-color: var(--secondary-color);
     pointer-events: none;
 }
 
@@ -139,7 +162,7 @@ header span {
     padding: 1rem;
     box-shadow: 0 0 5px;
     align-content: center;
-    border: solid 2px var(--accent-color2);
+    border: solid 2px var(--secondary-color);
 }
 
 .card img {
@@ -152,17 +175,13 @@ header span {
 }
 
 .card ul {
-    padding: 0;
-}
-
-.card ul li {
-    margin: 0 1rem;
+    padding: 0 1rem;
 }
 
 /* Links */
 .card a {
     word-wrap: break-word;
-    color: var(--accent-color2);
+    color: var(--secondary-color);
     text-decoration: none;
 }
 
@@ -181,8 +200,13 @@ header span {
 }
 
 /************** LIST DISPLAY **************/
+.list {
+    display: flexbox;
+    font-size: 80%;
+}
+
 .list .card {
-    box-shadow: none;
+    /* box-shadow: none; */
     margin: .6rem 0;
     align-items: center;
     display: grid;
@@ -194,14 +218,22 @@ header span {
     display: none;
 }
 
+.list .name {
+    border-bottom: solid 1px var(--primary-color);
+}
+
+.list div {
+    margin-top: .6rem;
+}
+
 .list p {
     margin: .5rem 0;
 }
 
 /************************ FOOTER ************************/
 footer {
-    background-color: var(--main-color);
-    text-align: center;
+    background-color: var(--primary-color);
+    text-align: start;
     color: var(--light-color);
 }
 
@@ -211,11 +243,28 @@ footer {
     column-gap: 8px;
 }
 
-.social a {
+.social {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1.5rem;
+}
+
+.social img, .social a {
     width: 48px;
     height: 48px;
     color: var(--light-color);
+}
+
+.footer .contact-info {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.footer .logo-name {
+    font-size: 1.5rem;
+}
+
+.my-info {
+    text-align: center;
 }

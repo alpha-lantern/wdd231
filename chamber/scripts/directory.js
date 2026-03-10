@@ -44,8 +44,9 @@ function displayData(data) {
         let phone = document.createElement('p');
         let website = document.createElement('p');
         let websiteURL = document.createElement('a');
-        let activitiesList = document.createElement('ul');
         let memberLvl = document.createElement('p');
+        let activities = document.createElement('div'); // A div to contain the list of activities (easier styling)
+        let activitiesList = document.createElement('ul'); // The list of activities
 
         // Card classes for styling
         card.classList.add('card');
@@ -81,7 +82,9 @@ function displayData(data) {
         website.appendChild(websiteURL);
 
         // List company Activities
-        activitiesList.innerHTML = `<span class="label">Activities:</span> `;
+        activities.innerHTML = `<span class="label">Activities:</span> `;
+        activities.appendChild(activitiesList);
+        // Create a list element for each activity listed
         company.activities.forEach(activity => {
             let listElement = document.createElement('li');
 
@@ -97,7 +100,7 @@ function displayData(data) {
         card.appendChild(phone);
         card.appendChild(website);
         card.appendChild(memberLvl);
-        card.appendChild(activitiesList);
+        card.appendChild(activities);
 
         dataContainer.appendChild(card);
     });

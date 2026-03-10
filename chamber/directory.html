@@ -18,6 +18,10 @@
     <!-- STYLES -->
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/large.css">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
     <!-- SCRIPTS -->
     <script src="../scripts/dates.js" defer></script>
     <script src="../scripts/navigation.js" defer></script>
@@ -26,9 +30,12 @@
 <body>
     <!-- HEADER -->
     <header>
-        <img src="images/logo.svg" alt="Lima Chamber of Commerce Logo" width="1" height="1">
-        <span>Lima Chamber of Commerce</span>
-        <button id="ham-btn" class="hamburger" aria-label="Menu"></button>
+        <div class="header">
+            <img src="images/logo.svg" alt="Lima Chamber of Commerce Logo" width="1" height="1">
+            <span class="logo-name">Lima Chamber of Commerce</span>
+            <button id="dark-mode" class="dark" aria-label="Dark mode"></button>
+            <button id="ham-btn" class="hamburger" aria-label="Menu"></button>
+        </div>
     </header>
     <!-- NAVIGATION -->
     <nav id="nav-bar" class="navigation">
@@ -51,13 +58,23 @@
     </main>
     <!-- FOOTER -->
     <footer>
-        <div class="social">
-            <a href="https://github.com/alpha-lantern/wdd231" target="_blank"><img src="../images/github.svg" alt="Github icon" width="32" height="32"></a>
-            <a href="https://www.linkedin.com/in/alvin-timana" target="_blank"><img src="../images/linkedin.svg" alt="Linkedin icon" width="32" height="32"></a>
-            <a href="https://www.facebook.com/alvinjoel.timanasolier/" target="_blank"><img src="../images/facebook.svg" alt="Facebook icon" width="32" height="32"></a>
+        <div class="footer">
+            <div class="contact-info">
+                <span class="logo-name">Lima Chamber of Commerce</span>
+                <p>Av. Giuseppe Garibaldi 396, Jesús María 15072</p>
+                <p>info@lccmail.org</p>
+                <p>+51 932445023</p>
+            </div>
+            <div class="social">
+                <a href="https://github.com/alpha-lantern/wdd231" target="_blank"><img src="../images/github.svg" alt="Github icon" width="32" height="32"></a>
+                <a href="https://www.linkedin.com/in/alvin-timana" target="_blank"><img src="../images/linkedin.svg" alt="Linkedin icon" width="32" height="32"></a>
+                <a href="https://www.facebook.com/alvinjoel.timanasolier/" target="_blank"><img src="../images/facebook.svg" alt="Facebook icon" width="32" height="32"></a>
+            </div>
+            <div class="my-info">
+                <p><span id="currentYear"></span> · Alvin Timaná · WDD 231 · Lima, Perú</p>
+                <p id="lastModified"></p>
+            </div>
         </div>
-        <p><span id="currentYear"></span> · Alvin Timaná · WDD 231 · Lima, Perú</p>
-        <p id="lastModified"></p>
     </footer>
 </body>
 </html>
