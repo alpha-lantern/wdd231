@@ -1,0 +1,104 @@
+{
+    "country": "Peru",
+    "city": "Lima",
+    "companies": [
+        {
+        "name": "Global Services",
+        "address": {
+            "district": "",
+            "street": "Av. Arequipa",
+            "number": "330",
+            "postalCode": "15046"
+        },
+        "phoneNumber": "+51 930 483 794",
+        "websiteURL": "https://globalservices.pe",
+        "imageURL": "https://globalservices.pe/wp-content/uploads/2022/08/global-services-logo-124x121.png",
+        "membershipLevel": 1,
+        "activities": ["Industrial Cleaning"]
+        },
+        {
+        "name": "LimaRank",
+        "address": {
+            "district": "Santiago de Surco",
+            "street": "Felipe Pardo y Aliaga",
+            "number": "165",
+            "postalCode": "15056"
+        },
+        "phoneNumber": "+51 914407119",
+        "websiteURL": "https://limarank.pe/",
+        "imageURL": "https://limarank.pe/wp-content/uploads/2025/01/Horizontal-negro.png.webp",
+        "membershipLevel": 2,
+        "activities": ["Digital Marketing"]
+        },
+        {
+        "name": "A&M TECNICOS INGENIERO SAC",
+        "address": {
+            "district": "Lima",
+            "street": "",
+            "number": "051",
+            "postalCode": ""
+        },
+        "phoneNumber": "+51 913280309",
+        "websiteURL": "https://www.aymcontratista.com/",
+        "imageURL": "http://www.aymcontratista.com/wp-content/uploads/2025/07/cropped-LOGOAYMPNG-copia-2-300x115.png",
+        "membershipLevel": 1,
+        "activities": ["IT", "Auditing and consulting", " Installation and maintenance"]
+        },
+        {
+        "name": "Telematica SAC",
+        "address": {
+            "district": "San Isidro",
+            "street": "Urb. Corpac, Pj. 4",
+            "number": "127, Of. 303",
+            "postalCode": ""
+        },
+        "phoneNumber": "+51 936105486",
+        "websiteURL": "https://www.telematica.com.pe/quienes-somos/",
+        "imageURL": "https://assets.esri.com/content/dam/distributor-restricted/telematica-com-pe/telematica-1440.png",
+        "membershipLevel": 2,
+        "activities": ["IT", "Software Providers"]
+        },
+        {
+        "name": "OWP SAC",
+        "address": {
+            "district": "Barranco",
+            "street": "SAN CARLOS",
+            "number": "248",
+            "postalCode": "15047 "
+        },
+        "phoneNumber": "+51 5101113",
+        "websiteURL": "http://owpsac.com/",
+        "imageURL": "https://shop.articulospromocionales.pe/assets/img/logo.png",
+        "membershipLevel": 3,
+        "activities": ["Marketing and merchandising", "Advertising", "Plastic articles for shops and supermarkets"]
+        },
+        {
+        "name": "Corporación Técnica Navarro Hnos S.A.C.",
+        "address": {
+            "district": "Los Olivos",
+            "street": "Calle B",
+            "number": "Mz C - Lote 18",
+            "postalCode": "15039"
+        },
+        "phoneNumber": "+51 955814850",
+        "websiteURL": "https://gruponavarro.pe/",
+        "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ23GZNDLIVYGjzx73Ngs1U_UiK0JPEcgs01A&s",
+        "membershipLevel": 3,
+        "activities": ["Access control", "Security", "Surveillance systems"]
+        },
+        {
+        "name": "Disebas S.A.C.",
+        "address": {
+            "district": "Chorrillos",
+            "street": "Alameda Marqués de la Bula",
+            "number": "Mz. M1 Lt.3",
+            "postalCode": "15001"
+        },
+        "phoneNumber": "+51 511 2541632",
+        "websiteURL": "http://www.disebas.com.pe/",
+        "imageURL": "https://disebas.com.pe/wp-content/uploads/2024/03/cropped-logodisebas-1-77x77.jpg",
+        "membershipLevel": 2,
+        "activities": ["Dried food"]
+        }
+        ]
+}

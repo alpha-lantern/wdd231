@@ -1,0 +1,40 @@
+@media only screen and (min-width: 36rem) {
+    
+    /************** LIST DISPLAY **************/
+    .list .card {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .list .name {
+        grid-column: span 2;
+    }
+}
+
+@media only screen and (min-width: 38rem) {
+    header, main, nav, footer {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    
+    header {
+        grid-template-columns: 24px auto auto;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+    }
+
+    .navigation ul {
+        display: flex;
+    }
+    
+    .navigation li {
+        flex: 1 1 100%;
+    }
+
+}

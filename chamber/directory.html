@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage | WDD 231 | Alvin Timaná</title>
+    <meta name="description" content="Know the local businesses in the directory of the Lima Chamber of Commerce. We work for the development of businesses and growing of local commerce.">
+    <meta name="author" content="Alvin Timaná">
+    <meta property="og:title" content="Homepage - Lima Chamber of Commerce">
+    <meta property="og:description" content="Know the local businesses in the directory of the Lima Chamber of Commerce. We work for the development of businesses and growing of local commerce.">
+    <meta property="og:image" content="https://alpha-lantern.github.io/wdd231/chamber/images/dir-og-img.webp" alt="Webpage preview">
+    <meta property="og:url" content="https://alpha-lantern.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+    <!-- ICON -->
+    <link rel="icon" href="images/favicon.ico">
+    <!-- Normalize CSS file -->
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <!-- STYLES -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <!-- SCRIPTS -->
+    <script src="../scripts/dates.js" defer></script>
+    <script src="../scripts/navigation.js" defer></script>
+    <script src="scripts/directory.js" defer></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <img src="images/logo.svg" alt="Lima Chamber of Commerce Logo" width="1" height="1">
+        <span>Lima Chamber of Commerce</span>
+        <button id="ham-btn" class="hamburger" aria-label="Menu"></button>
+    </header>
+    <!-- NAVIGATION -->
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="current"><a href="#">Directory</a></li>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">Discover</a></li>
+        </ul>
+    </nav>
+    <!-- MAIN -->
+    <main>
+        <nav class="views">
+            <button class="applied" id="gridView">Grid</button>
+            <button id="listView">List</button>
+        </nav>
+        <div class="data grid" id="membersData">
+            <!-- Members Directory -->
+        </div>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        <div class="social">
+            <a href="https://github.com/alpha-lantern/wdd231" target="_blank"><img src="../images/github.svg" alt="Github icon" width="32" height="32"></a>
+            <a href="https://www.linkedin.com/in/alvin-timana" target="_blank"><img src="../images/linkedin.svg" alt="Linkedin icon" width="32" height="32"></a>
+            <a href="https://www.facebook.com/alvinjoel.timanasolier/" target="_blank"><img src="../images/facebook.svg" alt="Facebook icon" width="32" height="32"></a>
+        </div>
+        <p><span id="currentYear"></span> · Alvin Timaná · WDD 231 · Lima, Perú</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
