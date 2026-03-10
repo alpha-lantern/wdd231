@@ -54,6 +54,21 @@ main, .footer {
     height: 48px;
 }
 
+/* .dark::before {
+    content: "" / "Dark mode off";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/dark-mode.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.dark.on::before {
+    content: "" / "Dark mode on";
+    background-image: url("../images/dark-mode-on.svg");
+} */
+
 /************************ HAMBURGER NAV ************************/
 .hamburger, .dark {
     background: none;
