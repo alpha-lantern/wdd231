@@ -51,21 +51,6 @@ main, .footer {
     width: 48px;
     height: 48px;
 }
-
-.dark::before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-image: url("../images/dark-mode.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.dark.on::before {
-    background-image: url("../images/dark-mode-on.svg");
-}
-
 /************************ HAMBURGER NAV ************************/
 .hamburger, .dark {
     background: none;
