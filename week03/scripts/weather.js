@@ -10,7 +10,11 @@ async function apiFetch() {
         const response = await fetch(url);
         if (response.ok) {
             const data = await response.json();     
+<<<<<<< HEAD
             // console.log(data);
+=======
+            console.log(data);
+>>>>>>> d3b03b958129e52f38407bbbc1c9adea425c2950
             displayResults(data);
         } else {
             throw Error(await response.text());
