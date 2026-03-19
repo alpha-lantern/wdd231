@@ -1,4 +1,4 @@
-import { displayData } from "./displayData.mjs";
+import { displayData } from "./display-data.mjs";
 import { apiFetch } from "./fetch.mjs";
 
 // Container for the cards created with displayData()

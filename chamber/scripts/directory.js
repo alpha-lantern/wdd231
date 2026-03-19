@@ -1,4 +1,4 @@
-import { displayData } from "./displayData.mjs";
+import { displayData } from "./display-data.mjs";
 
 // SELECTORS
 const gridView = document.querySelector('#gridView');
