@@ -4,8 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lima Chamber of Commerce</title>
+    <meta name="description" content="At the Lima Chamber of Commerce, we work for the development of businesses and growing of local commerce. Come to know more about our vision, events, community, business or partner opportunities and more.">
+    <meta name="author" content="Alvin Timaná">
+    <!-- SOCIAL MEDIA -->
+    <meta property="og:title" content="Welcome to the Lima Chamber of Commerce Homepage">
+    <meta property="og:description" content="At the Lima Chamber of Commerce, we work for the development of businesses and growing of local commerce. Come to know more about our vision, events, community, business or partner opportunities and more.">
+    <meta property="og:image" content="https://alpha-lantern.github.io/wdd231/chamber/images/logo.svg">
+    <meta property="og:image:alt" content="Webpage preview">
+    <meta property="og:url" content="https://alpha-lantern.github.io/wdd231/chamber/index.html">
+    <meta property="og:type" content="website">
+    <!-- ICON -->
+    <link rel="icon" href="images/favicon.ico">
+    <!-- Normalize CSS file -->
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <!-- STYLES -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
+    <!-- SCRIPTS -->
+    <script src="../scripts/dates.js" defer></script>
+    <script src="../scripts/navigation.js" defer></script>
+    <script type="module" src="scripts/weather.mjs"></script>
+    <script type="module" src="scripts/businessCards.mjs"></script>
 </head>
 <body>
-    
+    <!-- HEADER -->
+    <header>
+        <section class="header">
+            <img src="images/logo.svg" alt="Lima Chamber of Commerce Logo" width="1" height="1">
+            <span class="logo-name">Lima Chamber of Commerce</span>
+            <button id="dark-mode" class="dark" aria-label="Dark mode"></button>
+            <button id="ham-btn" class="hamburger" aria-label="Menu"></button>
+        </section>
+    </header>
+    <!-- NAVIGATION -->
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="#">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="#">Join</a></li>
+            <li><a href="#">Discover</a></li>
+        </ul>
+    </nav>
+    <!-- MAIN -->
+    <main>
+        <!-- Hero -->
+        <section class="hero">  
+            <picture>
+                <source media="(min-width: 900px)" srcset="images/hero-l.webp">
+                <source media="(min-width: 600px)" srcset="images/hero-m.webp">
+                <img src="images/hero-s.webp" alt="" width="auto" height="auto">
+            </picture>
+            <div class="cta">
+                <span>Welcome to the Lima Chamber of Commerce</span>
+                <a href="join.html">Join The Chamber Here</a>
+            </div>
+        </section>
+        <section class="container info">
+            <h1>Home</h1>
+            <!-- 3 Inner Info Sections -->
+            <section id="events">
+                <h2>Events</h2>
+                <img src="images/event-1.webp" alt="Invitation to a business conference." loading="lazy">
+            </section>
+            <section id="weatherCurrent">
+                <h2>Current Weather</h2>
+            </section>
+            <section id="weatherForecast">
+                <h2>Weather Forecast</h2>
+            </section>
+        </section>
+        <section class="container business-cards" id="membersData">
+            <!-- 3 Random Businesses Cards -->
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer">
+            <section class="contact-info">
+                <span class="logo-name">Lima Chamber of Commerce</span>
+                <p>Av. Giuseppe Garibaldi 396, Jesús María 15072</p>
+                <p>info@lccmail.org</p>
+                <p>+51 932445023</p>
+            </section>
+            <section class="social">
+                <a href="https://github.com/alpha-lantern/wdd231" target="_blank"><img src="../images/github.svg" alt="Github icon" width="32" height="32"></a>
+                <a href="https://www.linkedin.com/in/alvin-timana" target="_blank"><img src="../images/linkedin.svg" alt="Linkedin icon" width="32" height="32"></a>
+                <a href="https://www.facebook.com/alvinjoel.timanasolier/" target="_blank"><img src="../images/facebook.svg" alt="Facebook icon" width="32" height="32"></a>
+            </section>
+            <section class="my-info">
+                <p><span id="currentYear"></span> · Alvin Timaná · WDD 231 · Lima, Perú</p>
+                <p id="lastModified"></p>
+            </section>
+        </div>
+    </footer>
 </body>
 </html>

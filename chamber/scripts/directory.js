@@ -1,3 +1,5 @@
+import { displayData } from "./displayData.mjs";
+
 // SELECTORS
 const gridView = document.querySelector('#gridView');
 const listView = document.querySelector('#listView');
@@ -7,9 +9,10 @@ const dataContainer = document.querySelector('#membersData');
 async function getMembersData() {
     const response = await fetch('data/members.json');
     const data = await response.json();
+    const companies = data.companies;
     // console.table(data.companies);
     // DISPLAY DATA
-    displayData(data);
+    displayData(companies, dataContainer);
     // GRID VIEW -> Toggles on the 'grid' class
     gridView.addEventListener('click', () => {
         // Apply the GRID class and style
@@ -30,79 +33,3 @@ async function getMembersData() {
     });
 }
 getMembersData(); // FUNCTION EXECUTE
-
-// Function to display the data in cards
-function displayData(data) {
-    dataContainer.innerHTML = '';
-    data.companies.forEach(company => {
-        // Create the new elements for each company
-        let card = document.createElement('section');
-        let logo = document.createElement('img');
-        let name = document.createElement('h2');
-        name.classList.add('name');
-        let address = document.createElement('p');
-        let phone = document.createElement('p');
-        let website = document.createElement('p');
-        let websiteURL = document.createElement('a');
-        let memberLvl = document.createElement('p');
-        let activities = document.createElement('div'); // A div to contain the list of activities (easier styling)
-        let activitiesList = document.createElement('ul'); // The list of activities
-
-        // Card classes for styling
-        card.classList.add('card');
-        if (company.membershipLevel === 3) {
-            card.classList.add('gold');
-            memberLvl.innerHTML = `<span class="label">Membership Level:</span> Gold`;
-        }
-        else if (company.membershipLevel === 2) {
-            card.classList.add('silver');
-            memberLvl.innerHTML = `<span class="label">Membership Level:</span> Silver`;
-        }
-        else {
-            // card.classList.add('member'); // Not necessary
-            memberLvl.innerHTML = `<span class="label">Membership Level:</span> Member`;
-        }
-
-        // Set company img attributes
-        logo.setAttribute('src', company.imageURL);
-        logo.setAttribute('alt', `Picture of ${company.name} logo`);
-        logo.setAttribute('loading', 'lazy');
-        logo.setAttribute('width', '100');
-        logo.setAttribute('height', 'auto');
-
-        // Populate elements
-        name.innerHTML = company.name;
-        address.innerHTML = `<span class="label">Address:</span> ${company.address.street} ${company.address.number} - ${company.address.district} ${company.address.postalCode} ${data.city}, ${data.country}`
-        phone.innerHTML = `<span class="label">Phone Number:</span> ${company.phoneNumber}`;
-
-        website.innerHTML = `<span class="label">Website:</span> `;
-        websiteURL.innerHTML = `${company.websiteURL}`;
-        websiteURL.setAttribute('href', company.websiteURL);
-        websiteURL.setAttribute('target', '_blank');
-        website.appendChild(websiteURL);
-
-        // List company Activities
-        activities.innerHTML = `<span class="label">Activities:</span> `;
-        activities.appendChild(activitiesList);
-        // Create a list element for each activity listed
-        company.activities.forEach(activity => {
-            let listElement = document.createElement('li');
-
-            listElement.innerHTML = activity;
-
-            activitiesList.appendChild(listElement);
-        });
-
-        // Append All Elements
-        card.appendChild(logo);
-        card.appendChild(name);
-        card.appendChild(address);
-        card.appendChild(phone);
-        card.appendChild(website);
-        card.appendChild(memberLvl);
-        card.appendChild(activities);
-
-        dataContainer.appendChild(card);
-    });
-    
-}
