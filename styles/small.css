@@ -157,6 +157,7 @@ section img {
     background-color: var(--accent-color2);
     color: var(--white);
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .card.completed {
@@ -230,6 +231,7 @@ footer {
     right: 1.4rem;
     padding: .2rem;
     background-color: var(--white);
+    cursor: pointer;
 }
 
 .course-modal button::before {
