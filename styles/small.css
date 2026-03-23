@@ -91,11 +91,6 @@ header span {
     color: var(--white);
 }
 
-.navigation a:hover {
-    background-color: var(--accent-color1);
-    color: var(--accent-color2);
-}
-
 /************************ MAIN ************************/
 main, footer {
     padding: 1rem 10px;
@@ -143,7 +138,7 @@ section img {
     font-weight: 600;
 }
 
-.courses button {
+.buttons button {
     width: 100%;
     height: 48px;
     cursor: pointer;
@@ -151,11 +146,6 @@ section img {
     color: var(--white);
     font-weight: 600;
     border: none;
-}
-
-.courses button:hover {
-    background-color: var(--accent-color1);
-    color: var(--accent-color2);
 }
 
 .courses .cardsContainer{
@@ -183,6 +173,12 @@ section img {
     text-align: center;
 }
 
+/* HOVER EFFECTS */
+.navigation a:hover, .courses button:hover, .card:hover {
+    background-color: var(--accent-color1);
+    color: var(--accent-color2);
+}
+
 /************************ FOOTER ************************/
 footer {
     background-color: var(--main-color);
@@ -203,4 +199,39 @@ footer {
     width: 48px;
     height: 48px;
     color: var(--white);
+}
+
+/*********** COURSE DETAILS DIALOG ***********/
+.course-modal {
+    max-width: 500px;
+    border-radius: 15px;
+    border-color: var(--accent-color2);
+}
+
+.course-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.course-modal span {
+    border-radius: 5px 5px 0 0;
+    display: block;
+    background-color: var(--main-color);
+    color: var(--white);
+    padding: .5rem 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.course-modal button {
+    position: absolute;
+    border: none;
+    top: 1.4rem;
+    right: 1.4rem;
+    padding: .2rem;
+    background-color: var(--white);
+}
+
+.course-modal button::before {
+    content: '❌';
 }

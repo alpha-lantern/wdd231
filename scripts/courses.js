@@ -86,6 +86,8 @@ const coursesButtons = document.querySelector('.buttons');
 const cardsContainer = document.querySelector('.cardsContainer');
 // TOTAL CREDITS
 const credits = document.querySelector('#credits');
+// DIALOG FOR COURSE DETAILS
+const courseDetail = document.querySelector('#courseDetail');
 
 // NEW FILTER BUTTONS
 const filterAll = document.createElement('button');
@@ -136,7 +138,10 @@ function generateCards(filteredCourses) {
         card.innerHTML = `${course.subject} ${course.number}`
 
         cardsContainer.appendChild(card);
-
+        
+        card.addEventListener('click', () => {
+            generateCourseDetails(course, courseDetail);
+        });
     });
     
     let totalCredits = filteredCourses.reduce((total, course) => {
@@ -144,4 +149,38 @@ function generateCards(filteredCourses) {
     }, 0);
 
     credits.innerHTML = `${totalCredits}`;
+}
+
+function generateCourseDetails(course, dialog) {
+    // Clear the dialog element
+    dialog.innerHTML = '';
+
+    let code = document.createElement('span');
+    let closeBtn = document.createElement('button');
+    let title = document.createElement('h2');
+    let credits = document.createElement('p');
+    let certificate = document.createElement('p');
+    let description = document.createElement('p');
+    let technology = document.createElement('p');
+
+    code.innerHTML = `${course.subject} ${course.number}`;
+    title.innerHTML = `${course.title}`;
+    credits.innerHTML = `${course.credits} credits`;
+    certificate.innerHTML = `Certificate: ${course.certificate}`;
+    description.innerHTML = `${course.description}`;
+    technology.innerHTML = `Technology: ${course.technology}`;
+
+    dialog.appendChild(code);
+    dialog.appendChild(closeBtn);
+    dialog.appendChild(title);
+    dialog.appendChild(credits);
+    dialog.appendChild(certificate);
+    dialog.appendChild(description);
+    dialog.appendChild(technology);
+    
+    closeBtn.addEventListener('click', () => {
+        dialog.close();
+    });
+
+    dialog.showModal();
 }
