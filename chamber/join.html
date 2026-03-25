@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Lima Chamber of Commerce</title>
+    <meta name="description" content="Join the Lima Chamber of Commerce, Gain access to exclusive benefits for your business or organization. Fill the application form here.">
+    <meta name="author" content="Alvin Timaná">
+    <!-- SOCIAL MEDIA -->
+    <meta property="og:title" content="Join the Lima Chamber of Commerce">
+    <meta property="og:description" content="Join the Lima Chamber of Commerce, Gain access to exclusive benefits for your business or organization. Fill the application form here.">
+    <meta property="og:image" content="https://alpha-lantern.github.io/wdd231/chamber/images/hero-l.webp">
+    <meta property="og:image:alt" content="Webpage preview">
+    <meta property="og:url" content="https://alpha-lantern.github.io/wdd231/chamber/join.html">
+    <meta property="og:type" content="website">
+    <!-- ICON -->
+    <link rel="icon" href="images/favicon.ico">
+    <!-- Normalize CSS file -->
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <!-- STYLES -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
+    <!-- SCRIPTS -->
+    <script src="../scripts/dates.js" defer></script>
+    <script src="../scripts/navigation.js" defer></script>
+    <script src="scripts/timestamp.js" defer></script>
+    <script type="module" src="scripts/membership.mjs"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header">
+            <img src="images/logo.svg" alt="Lima Chamber of Commerce Logo" width="1" height="1">
+            <span class="logo-name">Lima Chamber of Commerce</span>
+            <button id="dark-mode" class="dark" aria-label="Dark mode"></button>
+            <button id="ham-btn" class="hamburger" aria-label="Menu"></button>
+        </div>
+    </header>
+    <!-- NAVIGATION -->
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li class="current"><a href="#">Join</a></li>
+            <li><a href="#">Discover</a></li>
+        </ul>
+    </nav>
+    <!-- MAIN -->
+    <main>
+        <!-- Hero -->
+        <div class="hero">  
+            <picture>
+                <source media="(min-width: 800px)" srcset="images/hero-l.webp">
+                <source media="(min-width: 600px)" srcset="images/hero-m.webp">
+                <img src="images/hero-s.webp" alt="Collage of people working in a business" width="1000" height="425" fetchpriority=high>
+            </picture>
+            <div class="cta">
+                <h1>Join the Lima Chamber of Commerce</h1>
+            </div>
+        </div>
+        <section class="container join">
+            <!-- FORM -->
+            <form method="get" action="thankyou.html" class="application-form">
+                <h2>Membership Application Form</h2>
+                <fieldset>
+                    <legend>About You</legend>
+                    <!-- NAME AND LAST NAME -->
+                    <label for="first">First name*
+                    <input type="text" name="name" id="first" autocomplete="given-name" required></label>
+                    <label for="last">Last name*
+                    <input type="text" name="last-name" id="last" autocomplete="family-name" required></label>
+                    <!-- TITLE -->
+                    <label for="org-title">Organizational title
+                    <input type="text" name="title" id="org-title" autocomplete="organization-title" pattern="[a-zA-Z\- ]{7,}"></label>
+                </fieldset>
+                <!-- CONTACT INFORMATION -->
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <!-- EMAIL -->
+                    <label for="email">Email*
+                    <input type="email" name="email" id="email" autocomplete="email" placeholder="example@mail.com" required></label>
+                    <!-- PHONE -->
+                    <label for="telephone">Phone number*
+                    <input type="tel" name="telephone" id="telephone" autocomplete="tel" placeholder="+51 997445132" pattern="[0-9\+ ]{9,}" required></label>
+                </fieldset>
+                <!-- BUSINESS / ORGANIZATION INFORMATION -->
+                <fieldset>
+                    <legend>Business / Organization</legend>
+                    <label for="organization">Name*
+                    <input type="text" name="organization" id="organization" autocomplete="organization" required></label>
+                    <!-- Description -->
+                    <label for="description">Description
+                    <textarea name="description" id="description"></textarea></label>
+                </fieldset>
+                <!-- MEMBERSHIP LEVEL -->
+                <fieldset>
+                    <legend>Membership Level</legend>
+                    <div>
+                        <label><input type="radio" name="membership" id="non-profit" value="np" required>NP</label>
+                        <label><input type="radio" name="membership" id="bronze" value="bronze">Bronze</label>
+                        <label><input type="radio" name="membership" id="silver" value="silver">Silver</label>
+                        <label><input type="radio" name="membership" id="gold" value="gold">Gold</label>
+                    </div>
+                </fieldset>
+                <!-- DATE -->
+                <input type="hidden" name="timestamp" id="timestamp">
+                <!-- BUTTON -->
+                <input type="submit" value="Apply for Membership" id="sumbmit" title="Join the Chamber">
+            </form>
+            <section class="membership-cards">
+                <h2>Membership Levels</h2>
+                <div id="np">Non Profit Membership
+                    <button class="info-btn">Learn More</button>
+                </div>
+                <div id="bronze">Bronze Membership
+                    <button class="info-btn">Learn More</button>
+                </div>
+                <div id="silver">Silver Membership
+                    <button class="info-btn">Learn More</button>
+                </div>
+                <div id="gold">Gold Membership
+                    <button class="info-btn">Learn More</button>
+                </div>
+            </section>
+            <dialog id="membershipDetail" closedby="any"></dialog>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer">
+            <div class="contact-info">
+                <span class="logo-name">Lima Chamber of Commerce</span>
+                <p>Av. Giuseppe Garibaldi 396, Jesús María 15072</p>
+                <p>info@lccmail.org</p>
+                <p>+51 932445023</p>
+            </div>
+            <div class="social">
+                <a href="https://github.com/alpha-lantern/wdd231" target="_blank"><img src="../images/github.svg" alt="Github icon" width="32" height="32"></a>
+                <a href="https://www.linkedin.com/in/alvin-timana" target="_blank"><img src="../images/linkedin.svg" alt="Linkedin icon" width="32" height="32"></a>
+                <a href="https://www.facebook.com/alvinjoel.timanasolier/" target="_blank"><img src="../images/facebook.svg" alt="Facebook icon" width="32" height="32"></a>
+            </div>
+            <section class="my-info">
+                <p><span id="currentYear"></span> · Alvin Timaná · WDD 231 · Lima, Perú</p>
+                <p id="lastModified"></p>
+            </section>
+        </div>
+    </footer>
+</body>
+</html>

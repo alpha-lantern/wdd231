@@ -68,6 +68,11 @@
     .info h1, #events  {
         grid-column: 1 / -1;
     }
+
+    /*********************** JOIN PAGE  ***********************/
+    .join {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 /* 720px */
@@ -96,9 +101,10 @@
         top: 30%;
     }
 
-    .cta span {
+    .cta span, .cta h1 {
         font-size: 2.5rem;
     }
+
     /* HOME INFO SECTION */
     .info {
         display: grid;

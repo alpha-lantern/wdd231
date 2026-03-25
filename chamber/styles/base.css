@@ -3,6 +3,7 @@
     --primary-color: #0c120c;
     --secondary-color: #9c0010;
     --light-color: #ECEBF3;
+    --bronze: #d78f47; /* For Bronze membership */
     --silver: #c0c0c0; /* For Silver membership level and header border */
     --gold: #ffd700; /* For Gold membership level */
 }
@@ -24,12 +25,21 @@ header, .navigation li {
     padding: 1rem .6rem;
 }
 
-.logo-name {
-    font-weight: 600;
-}
 /* Body Title */
 .container h1 {
     margin-top: .5rem;
+}
+
+/* LABEL CLASS & OTHER HIGHLIGHTED TEXTS*/
+.label, 
+.logo-name, 
+.navigation a,  
+.cta span, 
+.application-form legend, 
+.membership-cards div, 
+#membershipDetail .price, 
+#membershipDetail ul::before {
+    font-weight: 700;
 }
 
 /************************** HEADER **************************/
@@ -57,21 +67,6 @@ header, .navigation li {
     width: 48px;
     height: 48px;
 }
-
-/* .dark::before {
-    content: "" / "Dark mode off";
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-image: url("../images/dark-mode.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.dark.on::before {
-    content: "" / "Dark mode on";
-    background-image: url("../images/dark-mode-on.svg");
-} */
 
 /************************ HAMBURGER NAV ************************/
 .hamburger, .dark {
@@ -120,12 +115,11 @@ header, .navigation li {
 .navigation a {
     display: block;
     text-decoration: none;
-    font-weight: 500;
     padding: 1rem;
     color: var(--light-color);
 }
 
-.navigation a:hover {
+.navigation a:hover,.navigation a:focus {
     background-color: var(--light-color);
     color: var(--primary-color);
 }
@@ -158,7 +152,9 @@ footer {
     font-size: 1.5rem;
 }
 
-.my-info {
+
+/* ALSO THANKYOU PAGE */
+.my-info, .thanks h1 {
     text-align: center;
 }
 
@@ -177,7 +173,6 @@ footer {
     cursor: pointer;
     background-color: var(--primary-color);
     color: var(--light-color);
-    font-weight: 600;
     border: none;
 }
 
@@ -211,10 +206,6 @@ footer {
 .card img {
     display: block;
     margin: .6rem auto;
-}
-
-.card .label {
-    font-weight: 600;
 }
 
 .card ul {
@@ -286,18 +277,17 @@ footer {
 .cta {
     text-align: center;
     background-color: var(--light-color);
+    color: var(--secondary-color);
     padding: 1rem;
 }
 
 .cta span {
     display: block;
     font-size: 2rem;
-    font-weight: 600;
     margin-bottom: 1rem;
-    color: var(--secondary-color);
 }
 
-.cta a {
+.cta a, .info-btn {
     background-color: var(--primary-color);
     color: var(--light-color);
     font-weight: 600;
@@ -405,4 +395,213 @@ footer {
     margin: .5rem;
     display: inline;
     word-break: break-all;
+}
+
+/**********************************************************/
+/*********************** JOIN PAGE  ***********************/
+/**********************************************************/
+/* SECTION */
+.join {
+    display: grid;
+    gap: 1rem;
+}
+
+/* APPLICATION FORM */
+.application-form input[type=text],
+.application-form textarea,
+.application-form input[type=email],
+.application-form input[type=tel],
+.application-form label {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.application-form input[type=text],
+.application-form input[type=email],
+.application-form input[type=tel] {
+    height: 3rem;
+    padding: .5rem;
+    margin-top: .2rem;
+    border: 1px solid;
+}
+
+.application-form textarea {
+    height: 5rem;
+    padding: .5rem;
+    margin-top: .2rem;
+    border: 1px solid;
+}
+
+.application-form input[type=radio] {
+    margin: 0 .5rem;
+}
+
+/* Required Input */
+.application-form input:required {
+    border-left: 5px solid var(--secondary-color);
+}
+
+.application-form input:required:valid {
+    border-left: 5px solid var(--silver);
+}
+
+/* Labels */
+.application-form label {
+    padding: .5rem 0;
+}
+
+.application-form fieldset {
+    margin: .5rem 0;
+    border: none;
+    border-top: 4px solid var(--secondary-color);
+}
+
+.application-form legend {
+    padding: 0 .5rem;
+    color: var(--secondary-color)
+}
+
+/* Button */
+.application-form input[type=submit] {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--light-color);
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover, input[type=submit]:focus {
+    box-shadow: none;
+}
+
+/* MEMBERSHIP LEVEL CARDS */
+.membership-cards div {
+    width: auto;
+    height: 10rem;
+    align-content: center;
+    opacity: 0;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 0 5rem;
+    animation: slide-in 1s ease-in-out forwards;
+}
+
+.info-btn {
+    max-width: max-content;
+    margin: 2rem auto 0;
+    font-size: 1rem;
+    border-radius: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+#np {
+    border: 2px solid var(--primary-color);
+}
+
+#bronze {
+    background-color: var(--bronze);
+    animation-delay: .5s;
+    border: 2px solid var(--bronze);
+}
+
+#silver {
+    background-color: var(--silver);
+    animation-delay: 1s;
+    border: 2px solid var(--silver);
+}
+#gold {
+    background-color: var(--gold);
+    animation-delay: 1.5s;
+    border: 2px solid var(--gold);
+}
+
+/* Modal Detail */
+#membershipDetail::backdrop {
+    background-color: var(--primary-color);
+    opacity: .3;
+}
+
+#membershipDetail h2 {
+    margin: 0 0 1rem;
+    text-align: center;
+    padding: 1rem;
+    border: 3px solid var(--primary-color);
+}
+
+#membershipDetail.bronze h2 {
+    background-color: var(--bronze);
+}
+
+#membershipDetail.silver h2 {
+    background-color: var(--silver);
+}
+
+#membershipDetail.gold h2 {
+    background-color: var(--gold);
+}
+
+#membershipDetail span {
+    display: block;
+    text-align: center;
+}
+
+#membershipDetail .price {
+    font-size: 2rem;
+}
+
+#membershipDetail ul::before {
+    content: "Benefits:";
+    margin: 0 -1.5rem;
+}
+
+/************************ HOVER TRANSITIONS ************************/
+.info-btn:hover, .info-btn:focus {
+    border-radius: .5rem;
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    transition: border-radius .5s, background-color .5s, color .5s;
+}
+
+.membership-cards div:has(.info-btn:hover, .info-btn:focus) {
+    border-radius: 1rem;
+    transition: border-radius .5s, background-color .2s, color .5s;
+}
+
+#np:has(.info-btn:hover, .info-btn:focus)  {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+#gold:has(.info-btn:hover, .info-btn:focus)  {
+    background-color: var(--primary-color);
+    color: var(--gold);
+}
+
+#silver:has(.info-btn:hover, .info-btn:focus)  {
+    background-color: var(--primary-color);
+    color: var(--silver);
+}
+
+#bronze:has(.info-btn:hover, .info-btn:focus)  {
+    background-color: var(--primary-color);
+    color: var(--bronze);
+}
+
+/***************************** ANIMATION *****************************/
+@keyframes slide-in {
+    0% {
+        transform: translate(30%, 30%);
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 100%;
+    }
 }

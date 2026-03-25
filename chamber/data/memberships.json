@@ -1,0 +1,32 @@
+{
+    "memberships": [
+        {
+            "simple": "np",
+            "name": "Non Profit",
+            "level": 0.00,
+            "cost": 0,
+            "benefits": ["Free access to special events", "Exclusive trainings"]
+        },
+        {
+            "simple": "bronze",
+            "name": "Bronze",
+            "level": 1,
+            "cost": 40.00,
+            "benefits": ["Free access to special events", "Exclusive trainings", "Exclusive partnership opportunities"]
+        },
+        {
+            "simple": "silver",
+            "name": "Silver",
+            "level": 2,
+            "cost": 80.00,
+            "benefits": ["Free access to special events", "Exclusive trainings", "Exclusive partnership opportunities", "Spotlight position in the Chamber website", "Advertizing partners"]
+        },
+        {
+            "simple": "gold",
+            "name": "Gold",
+            "level": 3,
+            "cost": 150.00,
+            "benefits": ["Free access to special events", "Exclusive trainings", "Exclusive partnership opportunities", "Spotlight position in the Chamber website", "Advertizing partners", "Exclusive discounts", "Specialized consulting"]
+        }
+    ]
+}
