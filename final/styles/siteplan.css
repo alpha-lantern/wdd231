@@ -1,0 +1,125 @@
+:root {
+    --titles-font: "Dancing Script", cursive;
+    --headings-font: "Noto Serif", serif;
+    --body-font: "Open Sans", sans-serif;
+    --primary-color: #8ead4f;
+    --secondary-color: #f3c534;
+    --accent-color: #00796b;
+    /* --accent-color-2: #cb5501; */
+    --text-color: #333333;
+    --main-background: #faf9f6;
+    --background-2: #e0e0e0;
+}
+
+* {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-2);
+}
+
+header, main, footer {
+    max-width: 60rem;
+    margin: 0 auto;
+    background-color: var(--main-background);
+    padding: 1rem;
+}
+
+header {
+    border-bottom: 2px solid var(--primary-color);
+}
+
+header p {
+    margin: 0;
+    font-family: var(--titles-font);
+}
+/* LOGO */
+.logo {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.logo span, h1 {
+    font-family: var(--titles-font);
+    font-size: 2.5rem;
+}
+
+/* HEADINGS */
+h1 {
+    text-align: center;
+}
+
+h2, h3 {
+    font-family: var(--headings-font);
+    font-weight: 200;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+/* COLOR SCHEME */
+.color::after {
+    border: 1px solid var(--text-color);
+    font-weight: 700;
+    padding: .2rem .5rem;
+}
+
+.main-c::after {
+    content: "#8ead4f";
+    background-color: var(--primary-color);
+}
+
+.sec-c::after {
+    content: "#f3c534";
+    background-color: var(--secondary-color);
+}
+
+.accent::after {
+    content: "#f3c534";
+    background-color: var(--accent-color);
+    color: var(--main-background);
+}
+
+.text::after {
+    content: "#333333";
+    background-color: var(--text-color);
+    color: var(--secondary-color);
+}
+
+.background-1::after {
+    content: "#faf9f6";
+    background-color: var(--main-background);
+}
+
+.background-2::after {
+    content: "#e0e0e0";
+    background-color: var(--background-2);
+}
+
+/* TYPOGRAPHY */
+.titles-ex::after {
+    font-family: var(--titles-font);
+    content: "Dancing Script";
+    font-size: 1.8rem;
+}
+
+.headings-ex::after {
+    font-family: var(--headings-font);
+    content: "Noto Serif";
+    font-size: 1.4rem;
+}
+
+.body-ex::after {
+    font-family: var(--body-font);
+    content: "Open Sans";
+}
+
+/* WIREFRAME */
+img {
+    max-width: 100%;
+}
