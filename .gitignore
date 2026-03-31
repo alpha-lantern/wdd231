@@ -1,0 +1,66 @@
+# ==============================================================================
+# IMAGE RULES
+# ==============================================================================
+# Ignore common image formats (excluding .webp, .ico, and .svg)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.webp_archive
+*.psd
+*.ai
+
+# ==============================================================================
+# DEPENDENCIES & COMPILED CODE
+# ==============================================================================
+# Node modules (huge folders created by npm/yarn)
+node_modules/
+jspm_packages/
+
+# Production builds
+dist/
+build/
+out/
+
+# ==============================================================================
+# ENVIRONMENT VARIABLES & SENSITIVE DATA
+# ==============================================================================
+# Never commit API keys, passwords, or local configs
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ==============================================================================
+# SYSTEM FILES
+# ==============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# ==============================================================================
+# IDEs & EDITORS
+# ==============================================================================
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# WebStorm / IntelliJ
+.idea/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
