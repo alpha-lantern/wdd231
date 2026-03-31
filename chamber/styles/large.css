@@ -18,4 +18,42 @@
     #events, #weatherCurrent {
         grid-column: auto;
     }
+
+    /* DISCOVER */
+    #allPlaces {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: .5rem;
+        color: var(--light-color);
+    }
+
+    #allPlaces div {
+        grid-template-columns: auto;
+        background-color: initial;
+        position: relative;
+        grid-template-areas:
+        "title"
+        "description"
+        "address"
+        "button";
+    }
+
+    /* ADDITIONAL LAYER TO MAKE THE TEXT MORE VISIBLE */
+    #allPlaces div::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--primary-color);
+        opacity: .6;
+        z-index: -1; /* Entre la imagen y el texto */
+    }
+
+    #allPlaces img {
+        position: absolute;
+        height: auto;
+        z-index: -2;
+    }
 }

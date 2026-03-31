@@ -73,6 +73,24 @@
     .join {
         grid-template-columns: 1fr 1fr;
     }
+
+    /********************* DISCOVER PAGE  *********************/
+    #allPlaces div {
+        grid-template-columns: 300px auto;
+        grid-template-areas:
+        "picture title"
+        "picture description"
+        "picture address"
+        "picture button";
+    }
+
+    #allPlaces img {
+        object-fit: cover;
+        overflow: hidden;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+    }
 }
 
 /* For a Specific Transition */

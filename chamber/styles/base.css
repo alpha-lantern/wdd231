@@ -594,7 +594,56 @@ input[type=submit]:hover, input[type=submit]:focus {
     color: var(--bronze);
 }
 
-/***************************** ANIMATION *****************************/
+/**********************************************************/
+/********************* DISCOVER PAGE  *********************/
+/**********************************************************/
+/* CARD STYLES */
+#allPlaces div {
+    margin: .5rem 0;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    overflow: hidden;
+    align-items: center;
+    background-color: var(--light-color);
+    display: grid;
+    grid-template-areas:
+    "title"
+    "picture" 
+    "description"
+    "address"
+    "button";
+}
+
+#allPlaces h2, 
+#allPlaces p, 
+#allPlaces address, 
+#allPlaces button {
+    margin: 1rem .7rem;
+}
+
+#allPlaces h2 {
+    grid-area: title;
+}
+
+#allPlaces p {
+    grid-area: description;
+}
+
+#allPlaces address {
+    grid-area: address;
+}
+
+#allPlaces button {
+    grid-area: button;
+}
+
+#allPlaces img {
+    width: 100%;
+    height: auto;
+    grid-area: picture;
+}
+
+/***************************** ANIMATIONS *****************************/
 @keyframes slide-in {
     0% {
         transform: translate(30%, 30%);
