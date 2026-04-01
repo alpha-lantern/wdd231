@@ -107,7 +107,7 @@ header, .navigation li {
     list-style: none;
 }
 
-.navigation li.current, .cta a:hover {
+.navigation li.current, .cta a:hover, #allPlaces button:hover {
     background-color: var(--secondary-color);
 }
 
@@ -286,7 +286,7 @@ footer {
     margin-bottom: 1rem;
 }
 
-.cta a, .info-btn {
+.cta a, .info-btn, #allPlaces button {
     background-color: var(--primary-color);
     color: var(--light-color);
     font-weight: 600;
@@ -304,7 +304,7 @@ footer {
     gap: 1rem;
 }
 
-.info section, .cta a {
+.info section, .cta a, #allPlaces button {
     border: 1px solid var(--primary-color);
 }
 
@@ -605,6 +605,9 @@ input[type=submit]:hover, input[type=submit]:focus {
     overflow: hidden;
     align-items: center;
     background-color: var(--light-color);
+    /* Hover Effect */
+    transition: transform .2s ease;
+    /* Named Grid */
     display: grid;
     grid-template-areas:
     "title"
@@ -623,6 +626,7 @@ input[type=submit]:hover, input[type=submit]:focus {
 
 #allPlaces h2 {
     grid-area: title;
+    border-bottom: 2px solid var(--primary-color);
 }
 
 #allPlaces p {
@@ -633,14 +637,65 @@ input[type=submit]:hover, input[type=submit]:focus {
     grid-area: address;
 }
 
+#allPlaces img {
+    width: 90%;
+    height: auto;
+    grid-area: picture;
+    margin: 0 auto;
+}
+
 #allPlaces button {
     grid-area: button;
 }
 
-#allPlaces img {
+/* LAST VISIT LOG */
+#visitLog {
+    padding: .5rem 1rem;
+    margin: 0;
+    top: auto;
+    left: auto;
+    right: 0;
+    bottom: .5rem;
+    /* max-width: 20rem; */
+    border-color: var(--secondary-color);
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: 0 0 10px;
+}
+
+#visitLog>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#visitLog button {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    width: 44px;
+    height: 44px;
+    background-color: initial;
+    border-radius: 100%;
+    border-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+/* DETAIL */
+#detail {
+    max-width: 35rem;
+    align-items: center;
+    margin: auto 1rem;
+    border-radius: 1rem;
+}
+
+#detail img {
+    display: block;
     width: 100%;
     height: auto;
-    grid-area: picture;
+    margin: 0 auto;
+}
+
+#detail address {
+    margin: 1rem 0;
 }
 
 /***************************** ANIMATIONS *****************************/

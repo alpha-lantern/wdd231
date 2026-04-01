@@ -91,6 +91,15 @@
         height: 100%;
         width: 100%;
     }
+    
+    #allPlaces div:hover {
+        transform: scale(102%);
+    }
+
+    /* DETAILS */
+    #detail {
+        margin: auto;
+    }
 }
 
 /* For a Specific Transition */

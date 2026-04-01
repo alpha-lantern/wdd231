@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discover | Lima Chamber of Commerce</title>
-    <meta name="description" content="">
+    <meta name="description" content="Explore Lima’s magic: from historic catacombs and ancient ruins to coastal cliffs and vibrant fountain light shows!">
     <meta name="author" content="Alvin Timaná">
     <!-- SOCIAL MEDIA -->
     <meta property="og:title" content="Discover local interests in Lima, Peru's capital">
-    <meta property="og:description" content="At the Lima Chamber of Commerce, we work for the development of businesses and growing of local commerce. Join our events, community and more.">
+    <meta property="og:description" content="Explore Lima’s magic: from historic catacombs and ancient ruins to coastal cliffs and vibrant fountain light shows!">
     <meta property="og:image" content="https://alpha-lantern.github.io/wdd231/chamber/images/social-img.webp">
     <meta property="og:image:alt" content="Webpage preview">
     <meta property="og:url" content="https://alpha-lantern.github.io/wdd231/chamber/index.html">
@@ -29,6 +29,7 @@
     <script src="../scripts/dates.js" defer></script>
     <script src="../scripts/navigation.js" defer></script>
     <script type="module" src="scripts/discover.mjs"></script>
+    <script type="module" src="scripts/visit.mjs"></script>
 </head>
 <body>
     <!-- HEADER -->
@@ -62,8 +63,18 @@
                 <h1>Discover the Best Places to Visit in Lima</h1>
             </section>
         </div>
+        <!-- FEATURED PLACES -->
         <div id="allPlaces" class="container">
         </div>
+        <!-- LAST VISIT POPOVER -->
+        <div popover="auto" id="visitLog">
+            <div>
+                <p id="message"></p>
+                <button popovertarget="visitLog" popovertargetaction="hide">❌</button>
+            </div>
+        </div>
+        <!-- PLACE DETAIL -->
+        <dialog id="detail" closedby="any"></dialog>
     </main>
     <!-- FOOTER -->
     <footer>

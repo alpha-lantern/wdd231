@@ -2,7 +2,7 @@ export const places = [
   {
     "name": "Circuito Mágico del Agua",
     "description": "The world's largest water fountain complex in a public park. It features spectacular laser, light, and music shows once the sun goes down.",
-    "address": "Jirón Madre de Dios S/N, Cercado de Lima",
+    "address": "Jirón Madre de Dios, Cercado de Lima",
     "cost": "S/ 5.00 (Approx. $1.50 USD)",
     "imageUrl": "circuito-magico-agua.webp"
   },
@@ -16,7 +16,7 @@ export const places = [
   {
     "name": "Huaca Pucllana",
     "description": "An impressive adobe and clay pyramid built by the Lima Culture between 200 and 700 AD, beautifully preserved in the middle of a modern neighborhood.",
-    "address": "Calle General Borgoño s/n, cuadra 8, Miraflores",
+    "address": "Calle General Borgoño, cuadra 8, Miraflores",
     "cost": "S/ 15.00 (Approx. $4.00 USD)",
     "imageUrl": "huaca-pucllana.webp"
   },
