@@ -9,12 +9,12 @@
 }
 /************************* GENERAL *************************/
 * {
-    font-family: var(--family-font);
     box-sizing: border-box;
 }
 
 body {
     color: var(--primary-color);
+    font-family: var(--family-font);
 }
 
 header, .navigation li {
@@ -60,13 +60,11 @@ header, .navigation li {
 }
 
 /************************ DARK MODE BTN ************************/
-.dark, .hamburger {
-    width: 48px;
-    height: 48px;
-}
 
 /************************ HAMBURGER NAV ************************/
 .hamburger, .dark {
+    width: 48px;
+    height: 48px;
     background: none;
     border: none;
     font-size: 2rem;
