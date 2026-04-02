@@ -30,13 +30,10 @@ header, .navigation li {
     margin-top: .5rem;
 }
 
-/* LABEL CLASS & OTHER HIGHLIGHTED TEXTS*/
-.label, 
-.logo-name, 
-.navigation a,  
-.cta span, 
-.application-form legend, 
-.membership-cards div, 
+/* STRONG CLASS & OTHER HIGHLIGHTED TEXTS*/
+.strong, 
+.navigation a, 
+.application-form legend,
 #membershipDetail .price, 
 #membershipDetail ul::before {
     font-weight: 700;
@@ -67,6 +64,7 @@ header, .navigation li {
     width: 48px;
     height: 48px;
 }
+
 /************************ HAMBURGER NAV ************************/
 .hamburger, .dark {
     background: none;
@@ -118,7 +116,7 @@ header, .navigation li {
     color: var(--light-color);
 }
 
-.navigation a:hover,.navigation a:focus {
+.navigation a:hover, .navigation a:focus {
     background-color: var(--light-color);
     color: var(--primary-color);
 }
