@@ -38,7 +38,10 @@ function displayDetailModal(modal, place) {
 // Put the main information of a single place in a container or card
 function generateCard(container, place) {
     // GENERATE NEW ELEMENTS
+    let cardBackground = document.createElement('div');
+    cardBackground.classList.add('card-background');
     let card = document.createElement('div');
+    card.classList.add('card-content');
     let title = document.createElement('h2');
     title.textContent = place.name;
     let image = document.createElement('img');
@@ -54,6 +57,7 @@ function generateCard(container, place) {
     let button = document.createElement('button');
     button.textContent = `Learn More`;
 
+    // Button to show modal with details
     button.addEventListener('click', () => {
         displayDetailModal(modal, place);
         detail.showModal();
@@ -64,7 +68,8 @@ function generateCard(container, place) {
     card.appendChild(description);
     card.appendChild(address);
     card.appendChild(button);
-    container.appendChild(card);
+    cardBackground.appendChild(card);
+    container.appendChild(cardBackground);
 }
 
 // Call the function

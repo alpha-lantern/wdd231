@@ -75,7 +75,7 @@
     }
 
     /********************* DISCOVER PAGE  *********************/
-    #allPlaces div {
+    #allPlaces .card-content {
         grid-template-columns: 300px auto;
         grid-template-areas:
         "picture title"
@@ -92,7 +92,7 @@
         width: 100%;
     }
     
-    #allPlaces div:hover {
+    .card-background:has(.card-content:hover) {
         transform: scale(102%);
     }
 

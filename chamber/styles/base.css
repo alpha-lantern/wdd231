@@ -2,7 +2,7 @@
     --family-font: "Open Sans", sans-serif; /* Full weight axis: 300 to 800 // Optional Font: "Crimson Pro", serif; */
     --primary-color: #0c120c;
     --secondary-color: #9c0010;
-    --light-color: #ECEBF3;
+    --light-color: #ecebf3;
     --bronze: #d78f47; /* For Bronze membership */
     --silver: #c0c0c0; /* For Silver membership level and header border */
     --gold: #ffd700; /* For Gold membership level */
@@ -103,7 +103,7 @@ header, .navigation li {
     list-style: none;
 }
 
-.navigation li.current, .cta a:hover, #allPlaces button:hover {
+.navigation li.current, .cta a:hover, .card-content button:hover {
     background-color: var(--secondary-color);
 }
 
@@ -282,7 +282,7 @@ footer {
     margin-bottom: 1rem;
 }
 
-.cta a, .info-btn, #allPlaces button {
+.cta a, .info-btn, .card-content button {
     background-color: var(--primary-color);
     color: var(--light-color);
     font-weight: 600;
@@ -300,7 +300,7 @@ footer {
     gap: 1rem;
 }
 
-.info section, .cta a, #allPlaces button {
+.info section, .cta a, .card-content button {
     border: 1px solid var(--primary-color);
 }
 
@@ -594,15 +594,19 @@ input[type=submit]:hover, input[type=submit]:focus {
 /********************* DISCOVER PAGE  *********************/
 /**********************************************************/
 /* CARD STYLES */
-#allPlaces div {
+.card-background {
     margin: .5rem 0;
+    border-radius: 10px;
+    /* Hover Effect */
+    transition: transform .2s ease;
+}
+
+#allPlaces .card-content {
     border: 1px solid var(--primary-color);
     border-radius: 10px;
     overflow: hidden;
     align-items: center;
     background-color: var(--light-color);
-    /* Hover Effect */
-    transition: transform .2s ease;
     /* Named Grid */
     display: grid;
     grid-template-areas:
