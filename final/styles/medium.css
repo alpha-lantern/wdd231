@@ -1,0 +1,43 @@
+/* 640px */
+@media only screen and (min-width: 40rem) {
+    .hamburger {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+    }
+
+    .navigation ul {
+        text-align: center;
+        flex-direction: row;
+    }
+
+    .navigation li {
+        flex: 1 1 auto;
+    }
+
+    .hero-search {
+        position: absolute;
+        height: 75%;
+        top: 7.5%;
+        left: 15%;
+        right: 15%;
+        padding: .5rem 2rem;
+        grid-template-columns: auto 8rem;
+        column-gap: .5rem;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+        grid-column: span 2;
+    }
+
+    .hero-search label {
+        font-size: 1.2rem;
+        grid-column: span 2;
+    }
+}
+
+@media only screen and (min-width: 50rem) {
+}

@@ -1,0 +1,225 @@
+/* Mobile view and General Rules */
+/* Effects (hover, transition, current, etc) and Animations are
+at the end of the CSS. */
+/* VARIABLES */
+:root {
+    --titles-font: "Dancing Script", cursive;
+    --headings-font: "Noto Serif", serif;
+    --body-font: "Open Sans", sans-serif;
+    --primary-color: #9dc059;
+    --secondary-color: #f3c534;
+    --accent-color: #00796b;
+    /* --accent-color-2: #cb5501; */
+    --text-color: #0d0d0d;
+    --main-background: #faf9f6;
+    --background-2: #e0e0e0;
+}
+
+/******************/
+/* OVERALL STYLES */
+/******************/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+}
+
+h1, .logo-name, .hero h2 {
+    font-family: var(--titles-font);
+}
+
+h2, h3 {
+    font-family: var(--headings-font);
+    font-weight: 200;
+}
+
+/* Header and Footer colors */
+header, footer {
+    background-color: var(--primary-color);
+}
+
+.header, .navigation, .footer {
+    padding: .5rem 1rem;
+}
+
+.footer {
+    text-align: center;
+}
+
+.strong {
+    font-weight: 600;
+}
+
+/*************/
+/*   HEADER  */
+/*************/
+.header {
+    display: grid;
+    grid-template-columns: auto 1fr 3rem;
+    align-items: center;
+    gap: .5rem;
+}
+
+/*************************/
+/* LOGO AND NAME SPECIAL */
+/*************************/
+.logo {
+    width: 2rem;
+    height: auto;
+}
+
+/*****************/
+/*   NAVIGATION  */
+/*****************/
+.navigation {
+    padding: 0;
+    display: none;
+    background-color: var(--primary-color);
+}
+
+.navigation ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation a {
+    font-weight: 600;
+    display: block;
+    padding: .8rem;
+    color: var(--text-color);
+    text-decoration: none;
+    background-color: var(--primary-color);
+}
+
+.navigation.show {
+    display: block;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--main-color);
+    cursor: pointer;
+    font-family: var(--body-font);
+}
+
+.hamburger::before {
+    content: "\2630";
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+}
+
+/* This one is specific for
+the homepage */
+/**************************/
+/* HERO BANNER AND SEARCH */
+/**************************/
+/* Banner */
+.hero {
+    width: 100%;
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+/* Search Form */
+.hero-search {
+    margin: .5rem;
+    background-color: color-mix(in srgb, var(--background-2), transparent 30%);
+    align-items: center;
+    padding: .5rem;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.hero h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+
+.hero-search label {
+    display: block;
+    margin: 1rem 0 .2rem;
+    align-self: end;
+}
+
+.hero-search input, .hero-search button {
+    padding: .7rem .5rem;
+    margin: .2rem 0;
+    align-self: baseline;
+}
+
+/*********************/
+/* SECTION CONTAINERS*/
+/*********************/
+/* CONTAINER */
+.container {
+    margin: .5rem;
+}
+
+/********************************/
+/* RECIPES CONTAINER TO DISPLAY */
+/********************************/
+.recipes-container {
+    display: grid;
+}
+
+/*****************/
+/* RECIPES STYLE */
+/*****************/
+.recipe {
+    display: grid;
+    grid-template-areas: 
+    "image"
+    "name"
+    /* "qualification" */
+    "prep-time"
+    "description"
+    "view-more";
+}
+
+.recipe img {
+    grid-area: image;
+}
+
+.recipe h3 {
+    grid-area: name;
+}
+
+.recipe-prep-time {
+    grid-area: prep-time;
+}
+
+.recipe-desc {
+    grid-area: description;
+}
+
+.recipe-view-more {
+    grid-area: button;
+}
+
+/*************************/
+/* HOVER & OTHER EFFECTS */
+/*************************/
+.nav-hover:hover, .nav-hover:focus, .navigation .current {
+    background-color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+
+/*****************/
+/*  TRANSITIONS  */
+/*****************/

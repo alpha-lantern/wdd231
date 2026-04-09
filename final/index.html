@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Recipes</title>
+    <title>Easy Taste</title>
     <meta name="description" content="Explore new recipes, search and find your next meal. Find the most popular, healthy, easier and more recipes in our homepage.">
     <meta name="author" content="Alvin Timaná">
     <!-- SOCIAL MEDIA -->
@@ -13,46 +13,81 @@
     <meta property="og:image:alt" content="Webpage preview">
     <meta property="og:url" content="https://alpha-lantern.github.io/wdd231/final/">
     <meta property="og:type" content="website">
+    <!-- ICON -->
+    <link rel="icon" href="images/favicon.ico">
+    <!-- Normalize CSS file -->
+    <link rel="stylesheet" href="styles/normalize.css">
     <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Noto+Serif:wght@200&family=Open+Sans:wght@300..800&display=swap" rel="stylesheet">
     <!-- STYLES -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
     <!-- SCRIPTS -->
+    <script src="scripts/navigation.js" defer></script>
+    <script type="module" src="scripts/dates.mjs"></script>
+    <script type="module" src="scripts/search-query.mjs"></script>
 </head>
 <body>
     <!-- HEADER -->
     <header>
         <section class="header">
-            <img src="images/logo.svg" alt="Lima Chamber of Commerce Logo" width="1" height="1">
-            <h2 class="logo-name">Le'Recipe</h2>
-            <button id="dark-mode" class="dark" aria-label="Dark mode"></button>
+            <img class="logo" src="images/logo.svg" alt="Easy Taste logo" width="1" height="1">
+            <h2 class="logo-name">Easy Taste</h2>
+            <!-- <button id="dark-mode" class="dark" aria-label="Dark mode"></button> -->
             <button id="ham-btn" class="hamburger" aria-label="Menu"></button>
         </section>
     </header>
     <!-- NAVIGATION -->
     <nav id="nav-bar" class="navigation">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li class="current"><a href="#">Favorites</a></li>
-            <li><a href="join.html">Create</a></li>
+            <li><a class="nav-hover current" href="index.html">Home</a></li>
+            <li><a class="nav-hover" href="favorites.html">Favorites</a></li>
+            <li><a class="nav-hover" href="create.html">Create</a></li>
         </ul>
     </nav>
     <!-- MAIN -->
     <main>
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 60rem)" srcset="images/food-hero-l.webp">
+                <source media="(min-width: 40rem)" srcset="images/food-hero-m.webp">
+                <img src="images/food-hero-s.webp" alt="Picture of food ingredients" width="960" height="480">
+            </picture>
+            <form class="hero-search" action="index.html" method="get">
+                <h2>Find Your Next Meal</h2>
+                <label class="strong" for="byRecipe">Search by Name</label>
+                <input type="text" id="byRecipe" title="Recipe name" name="recipe-name" placeholder="Ex: Banana Pancakes">
+                <button title="Search recipe">Search</button>
+                <label class="strong" for="byIngredients">Search by Ingredients</label>
+                <input type="text" id="byIngredients" title="Ingredients you have" name="ingredients" placeholder="Ex: Banana, milk, etc">
+                <button title="Search by the ingredients">Find Dishes</button>
+            </form>
+        </div>
         <section class="container">
             <h1>Home</h1>
+            <section class="container trend" id="trendRecipes">
+                <h2>Trending Recipes</h2>
+            </section>
+            <section class="container newest" id="newestRecipes">
+                <h2>Newest Additions</h2>
+            </section>
         </section>
     </main>
     <!-- FOOTER -->
     <footer>
         <section class="footer">
-            <h2 class="logo-name">Le'Recipe</h2>
+            <h2 class="logo-name">Easy Taste</h2>
             <div class="contact-info">
-                <p>infolerecipe@mail.org</p>
+                <p>info_easytaste@mail.com</p>
                 <p>+51 932445023</p>
             </div>
             <div class="social">
-                <a href="https://github.com/alpha-lantern/wdd231" target="_blank"><img src="../images/github.svg" alt="Github icon" width="32" height="32"></a>
-                <a href="https://www.linkedin.com/in/alvin-timana" target="_blank"><img src="../images/linkedin.svg" alt="Linkedin icon" width="32" height="32"></a>
-                <a href="https://www.facebook.com/alvinjoel.timanasolier/" target="_blank"><img src="../images/facebook.svg" alt="Facebook icon" width="32" height="32"></a>
+                <a href="https://github.com/alpha-lantern/wdd231" target="_blank"><img src="images/github.svg" alt="Github icon" width="32" height="32"></a>
+                <a href="https://www.linkedin.com/in/alvin-timana" target="_blank"><img src="images/linkedin.svg" alt="Linkedin icon" width="32" height="32"></a>
+                <a href="https://www.facebook.com/alvinjoel.timanasolier/" target="_blank"><img src="images/facebook.svg" alt="Facebook icon" width="32" height="32"></a>
             </div>
             <div class="my-info">
                 <p><span id="currentYear"></span> · Alvin Timaná · WDD 231 · Lima, Perú</p>
