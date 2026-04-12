@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Easy Taste</title>
+    <title>My Favorites</title>
     <meta name="description" content="Explore new recipes, search and find your next meal. Find the most popular, healthy, easier and more recipes in our homepage.">
     <meta name="author" content="Alvin Timaná">
     <!-- SOCIAL MEDIA -->
@@ -28,7 +28,7 @@
     <!-- SCRIPTS -->
     <script src="scripts/navigation.js" defer></script>
     <script type="module" src="scripts/dates.mjs"></script>
-    <script type="module" src="scripts/recipe-cards.mjs"></script>
+    <script type="module" src="scripts/favorites-list.mjs"></script>
 </head>
 <body>
     <!-- HEADER -->
@@ -43,40 +43,16 @@
     <!-- NAVIGATION -->
     <nav id="nav-bar" class="navigation">
         <ul>
-            <li><a class="nav-hover current" href="index.html">Home</a></li>
+            <li><a class="nav-hover" href="index.html">Home</a></li>
             <li><a class="nav-hover" href="recipes.html">Recipes</a></li>
-            <li><a class="nav-hover" href="favorites.html">Favorites</a></li>
+            <li><a class="nav-hover current" href="favorites.html">Favorites</a></li>
         </ul>
     </nav>
     <!-- MAIN -->
     <main>
-        <div class="hero">
-            <picture>
-                <source media="(min-width: 60rem)" srcset="images/food-hero-l.webp">
-                <source media="(min-width: 40rem)" srcset="images/food-hero-m.webp">
-                <img src="images/food-hero-s.webp" alt="Picture of food ingredients" width="960" height="480">
-            </picture>
-            <form id="recipeSearch" class="hero-search" action="recipes.html" method="get">
-                <h2>Find Your Next Meal</h2>
-                <label class="strong" for="byRecipe">Search by Name</label>
-                <input type="text" id="byRecipe" title="Recipe name" name="recipe-name" placeholder="Ex: Banana Pancakes">
-                <button title="Search recipe">Search</button>
-                <label class="strong" for="byIngredients">Search by Ingredients</label>
-                <input type="text" id="byIngredients" title="Ingredients you have" name="ingredients" placeholder="Ex: Banana, milk, etc">
-                <input type="text" id="recipeId" name="id" value="" hidden>
-                <button title="Search by the ingredients">Find Dishes</button>
-            </form>
-        </div>
         <section class="container">
-            <h1>Home</h1>
-            <section class="container">
-                <h2>Trending Recipes</h2>
-                <div class="recipe-card" id="trendRecipes"></div>
-            </section>
-            <section class="container">
-                <h2>Newest Additions</h2>
-                <div class="recipe-card" id="newestRecipes"></div>
-            </section>
+            <h1>Favorite Recipes</h1>
+            <div class="favorites" id="favoriteRecipes"></div>
         </section>
     </main>
     <!-- FOOTER -->

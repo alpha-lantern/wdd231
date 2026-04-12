@@ -1,0 +1,204 @@
+{
+  "recipes": [
+    {
+      "id": 1,
+      "name": "Classic Avocado Toast",
+      "image": "avocado-toast.webp",
+      "prepTime": "10 min",
+      "difficulty": "Easy",
+      "ingredients": ["1 slice sourdough", "1/2 avocado", "Red pepper flakes", "Lemon juice"],
+      "instructions": "Toast the bread. Mash avocado with length juice. Spread and sprinkle with flakes.",
+      "tags": ["Breakfast", "Vegan"]
+    },
+    {
+      "id": 2,
+      "name": "Quinoa Salad Bowl",
+      "image": "quinoa-salad-bowl.webp",
+      "prepTime": "20 min",
+      "difficulty": "Medium",
+      "ingredients": ["1 cup quinoa", "Cucumber", "Cherry tomatoes", "Feta cheese"],
+      "instructions": "Cook quinoa. Chop vegetables. Toss everything with olive oil and lemon.",
+      "tags": ["Lunch", "Vegetarian"]
+    },
+    {
+      "id": 3,
+      "name": "Spicy Garlic Shrimp",
+      "image": "spicy-garlic-shrimp.webp",
+      "prepTime": "15 min",
+      "difficulty": "Easy",
+      "ingredients": ["1lb Shrimp", "4 cloves Garlic", "Chili oil", "Parsley"],
+      "instructions": "Sauté garlic in oil. Add shrimp until pink. Garnish with parsley.",
+      "tags": ["Dinner", "Seafood"]
+    },
+    {
+      "id": 4,
+      "name": "Berry Smoothie",
+      "image": "berry-smoothie.webp",
+      "prepTime": "5 min",
+      "difficulty": "Easy",
+      "ingredients": ["Mixed berries", "Banana", "Almond milk", "Honey"],
+      "instructions": "Blend all ingredients until smooth. Serve chilled.",
+      "tags": ["Breakfast", "Drink"]
+    },
+    {
+      "id": 5,
+      "name": "Mushroom Risotto",
+      "image": "mushroom-risotto.webp",
+      "prepTime": "40 min",
+      "difficulty": "Hard",
+      "ingredients": ["Arborio rice", "Mushrooms", "Vegetable broth", "Parmesan"],
+      "instructions": "Slowly add broth to rice while stirring. Mix in sautéed mushrooms and cheese.",
+      "tags": ["Dinner", "Vegetarian"]
+    },
+    {
+      "id": 6,
+      "name": "Caprese Skewers",
+      "image": "caprese-skewers.webp",
+      "prepTime": "15 min",
+      "difficulty": "Easy",
+      "ingredients": ["Cherry tomatoes", "Mozzarella balls", "Basil leaves", "Balsamic glaze"],
+      "instructions": "Thread ingredients onto small skewers. Drizzle with balsamic.",
+      "tags": ["Appetizer", "Vegetarian"]
+    },
+    {
+      "id": 7,
+      "name": "Chickpea Curry",
+      "image": "chickpea-curry.webp",
+      "prepTime": "30 min",
+      "difficulty": "Medium",
+      "ingredients": ["2 cans Chickpeas", "Coconut milk", "Curry powder", "Spinach"],
+      "instructions": "Simmer chickpeas in coconut milk and spices. Stir in spinach at the end.",
+      "tags": ["Dinner", "Vegan"]
+    },
+    {
+      "id": 8,
+      "name": "Greek Yogurt Parfait",
+      "image": "greek-yogurt-parfait.webp",
+      "prepTime": "5 min",
+      "difficulty": "Easy",
+      "ingredients": ["Greek yogurt", "Granola", "Blueberries", "Walnuts"],
+      "instructions": "Layer yogurt, granola, and berries in a glass. Top with nuts.",
+      "tags": ["Breakfast", "Healthy"]
+    },
+    {
+      "id": 9,
+      "name": "Beef Tacos",
+      "image": "beef-tacos.webp",
+      "prepTime": "20 min",
+      "difficulty": "Medium",
+      "ingredients": ["Ground beef", "Taco shells", "Shredded lettuce", "Cheddar"],
+      "instructions": "Brown the beef with spices. Fill shells and add toppings.",
+      "tags": ["Dinner", "Meat"]
+    },
+    {
+      "id": 10,
+      "name": "Pesto Pasta",
+      "image": "pesto-pasta.webp",
+      "prepTime": "15 min",
+      "difficulty": "Easy",
+      "ingredients": ["Pasta", "Basil pesto", "Pine nuts", "Cherry tomatoes"],
+      "instructions": "Boil pasta. Drain and mix with pesto. Top with nuts and tomatoes.",
+      "tags": ["Lunch", "Vegetarian"]
+    },
+    {
+      "id": 11,
+      "name": "Banana Pancakes",
+      "image": "banana-pancakes.webp",
+      "prepTime": "20 min",
+      "difficulty": "Medium",
+      "ingredients": ["2 ripe bananas", "2 eggs", "Baking powder", "Maple syrup"],
+      "instructions": "Mash bananas and mix with eggs. Fry small circles until golden.",
+      "tags": ["Breakfast", "Gluten-Free"]
+    },
+    {
+      "id": 12,
+      "name": "Tomato Basil Soup",
+      "image": "tomato-basil-soup.webp",
+      "prepTime": "25 min",
+      "difficulty": "Easy",
+      "ingredients": ["Canned tomatoes", "Garlic", "Onion", "Fresh basil"],
+      "instructions": "Sauté aromatics, add tomatoes, simmer, and blend until creamy.",
+      "tags": ["Lunch", "Vegetarian"]
+    },
+    {
+      "id": 13,
+      "name": "Honey Glazed Salmon",
+      "image": "honey-glazed-salmon.webp",
+      "prepTime": "15 min",
+      "difficulty": "Medium",
+      "ingredients": ["Salmon fillet", "Honey", "Soy sauce", "Ginger"],
+      "instructions": "Sear salmon skin-side down. Pour glaze over and finish in oven.",
+      "tags": ["Dinner", "Seafood"]
+    },
+    {
+      "id": 14,
+      "name": "Caprese Salad",
+      "image": "caprese-salad.webp",
+      "prepTime": "10 min",
+      "difficulty": "Easy",
+      "ingredients": ["Roma tomatoes", "Fresh mozzarella", "Basil", "Olive oil"],
+      "instructions": "Slice tomatoes and cheese. Alternate on a plate and drizzle oil.",
+      "tags": ["Appetizer", "Vegetarian"]
+    },
+    {
+      "id": 15,
+      "name": "Chicken Stir-Fry",
+      "image": "chicken-stir-fry.webp",
+      "prepTime": "20 min",
+      "difficulty": "Medium",
+      "ingredients": ["Chicken breast", "Broccoli", "Bell peppers", "Soy sauce"],
+      "instructions": "Flash-fry chicken. Add veggies and sauce. Serve over rice.",
+      "tags": ["Dinner", "Meat"]
+    },
+    {
+      "id": 16,
+      "name": "Ceviche Peruano",
+      "image": "ceviche-peruano.webp",
+      "prepTime": "20 min",
+      "difficulty": "Medium",
+      "ingredients": ["Fresh white fish", "Lime juice", "Red onion", "Aji limo", "Sweet potato", "Corn"],
+      "instructions": "Marinate fish cubes in lime juice with chili and onions. Serve with boiled sweet potato and corn.",
+      "tags": ["Seafood", "Peruvian", "Fresh"]
+    },
+    {
+      "id": 17,
+      "name": "Lomo Saltado",
+      "image": "lomo-saltado.webp",
+      "prepTime": "25 min",
+      "difficulty": "Medium",
+      "ingredients": ["Beef sirloin strips", "Red onion", "Tomatoes", "Soy sauce", "Vinegar", "French fries"],
+      "instructions": "Stir-fry beef at high heat. Add onions and tomatoes. Mix with soy sauce, vinegar, and crispy fries.",
+      "tags": ["Meat", "Peruvian", "Dinner"]
+    },
+    {
+      "id": 18,
+      "name": "Aji de Gallina",
+      "image": "aji-de-gallina.webp",
+      "prepTime": "45 min",
+      "difficulty": "Medium",
+      "ingredients": ["Shredded chicken", "Aji amarillo paste", "Bread soaked in milk", "Pecans", "Parmesan"],
+      "instructions": "Cook a creamy sauce with chili and bread. Stir in chicken. Serve over boiled potatoes with rice.",
+      "tags": ["Chicken", "Peruvian", "Comfort Food"]
+    },
+    {
+      "id": 19,
+      "name": "Causa Limeña",
+      "image": "causa-limena.webp",
+      "prepTime": "30 min",
+      "difficulty": "Hard",
+      "ingredients": ["Yellow potatoes", "Aji amarillo", "Lime juice", "Tuna or Chicken", "Avocado", "Mayo"],
+      "instructions": "Mash potatoes with lime and chili. Layer potato, avocado, and meat filling like a small cake.",
+      "tags": ["Appetizer", "Peruvian", "Cold"]
+    },
+    {
+      "id": 20,
+      "name": "Papa a la Huancaína",
+      "image": "papa-a-la-huancaina.webp",
+      "prepTime": "15 min",
+      "difficulty": "Easy",
+      "ingredients": ["Boiled potatoes", "Queso fresco", "Aji amarillo", "Milk", "Crackers", "Black olives"],
+      "instructions": "Blend cheese, chili, milk, and crackers into a smooth sauce. Pour over potato slices.",
+      "tags": ["Vegetarian", "Peruvian", "Appetizer"]
+    }
+  ]
+}

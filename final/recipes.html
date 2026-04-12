@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Easy Taste</title>
+    <title>Recipes on Easy Taste</title>
     <meta name="description" content="Explore new recipes, search and find your next meal. Find the most popular, healthy, easier and more recipes in our homepage.">
     <meta name="author" content="Alvin Timaná">
     <!-- SOCIAL MEDIA -->
@@ -28,7 +28,8 @@
     <!-- SCRIPTS -->
     <script src="scripts/navigation.js" defer></script>
     <script type="module" src="scripts/dates.mjs"></script>
-    <script type="module" src="scripts/recipe-cards.mjs"></script>
+    <!-- <script type="module" src="scripts/search-query.mjs"></script> -->
+    <script type="module" src="scripts/recipes.mjs"></script>
 </head>
 <body>
     <!-- HEADER -->
@@ -43,8 +44,8 @@
     <!-- NAVIGATION -->
     <nav id="nav-bar" class="navigation">
         <ul>
-            <li><a class="nav-hover current" href="index.html">Home</a></li>
-            <li><a class="nav-hover" href="recipes.html">Recipes</a></li>
+            <li><a class="nav-hover" href="index.html">Home</a></li>
+            <li><a class="nav-hover current" href="recipes.html">Recipes</a></li>
             <li><a class="nav-hover" href="favorites.html">Favorites</a></li>
         </ul>
     </nav>
@@ -68,20 +69,21 @@
             </form>
         </div>
         <section class="container">
-            <h1>Home</h1>
+            <h1 id="recipeName">Recipes</h1>
             <section class="container">
-                <h2>Trending Recipes</h2>
-                <div class="recipe-card" id="trendRecipes"></div>
+                <h2 id="filterName"></h2>
+                <div class="recipe-list" id="searchResult"></div>
+            <section class="container">
+                <h2>Explore More Recipes</h2>
+                <div class="recipe-card" id="recipesList"></div>
             </section>
-            <section class="container">
-                <h2>Newest Additions</h2>
-                <div class="recipe-card" id="newestRecipes"></div>
             </section>
         </section>
     </main>
     <!-- FOOTER -->
     <footer>
         <section class="footer">
+            
             <h2 class="logo-name">Easy Taste</h2>
             <div class="contact-info">
                 <p>info_easytaste@mail.com</p>

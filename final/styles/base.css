@@ -66,7 +66,7 @@ header, footer {
 /* LOGO AND NAME SPECIAL */
 /*************************/
 .logo {
-    width: 2rem;
+    width: 3rem;
     height: auto;
 }
 
@@ -167,48 +167,133 @@ the homepage */
 /*********************/
 /* CONTAINER */
 .container {
-    margin: .5rem;
+    margin: 2rem .5rem;
 }
 
 /********************************/
 /* RECIPES CONTAINER TO DISPLAY */
 /********************************/
-.recipes-container {
-    display: grid;
+/* Recipe Card display info */
+.recipe-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.recipe-card .ingredients, .recipe-card .instructions {
+    display: none;
 }
 
 /*****************/
 /* RECIPES STYLE */
 /*****************/
 .recipe {
+    flex: 0 0 auto;
+    position: relative;
+    align-items: center;
+    background-color: color-mix(in srgb, var(--background-2), transparent 30%);
+    padding: 1rem 1rem .5rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: .5rem;
+    margin: .2rem;
+    /* Grid Areas */
     display: grid;
     grid-template-areas: 
     "image"
     "name"
-    /* "qualification" */
     "prep-time"
-    "description"
+    "difficulty"
     "view-more";
 }
 
-.recipe img {
+.recipe p {
+    margin: .2rem 0;
+}
+
+.recipe .recipe-picture {
     grid-area: image;
+    width: 100%;
+    height: auto;
+    border-radius: .2rem;
 }
 
 .recipe h3 {
     grid-area: name;
+    margin: 1rem 0 .5rem;
 }
 
-.recipe-prep-time {
+.recipe .prep-time {
     grid-area: prep-time;
 }
 
-.recipe-desc {
-    grid-area: description;
+.recipe .difficulty {
+    grid-area: difficulty;
 }
 
-.recipe-view-more {
-    grid-area: button;
+.recipe .ingredients {
+    grid-area: ingredients;
+}
+
+.recipe .instructions {
+    grid-area: instructions;
+}
+
+.recipe .see-more {
+    grid-area: view-more;
+    margin: .5rem 0;
+    padding: .5rem;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: .2rem;
+    cursor: pointer;
+}
+
+/* Favorite mark */
+.recipe .fav-tag {
+    position: absolute;
+    top: .8rem;
+    right: .5rem;
+    width: 44px;
+    height: auto;
+    padding: 2px;
+    background-color: initial;
+    border: none;
+}
+
+/* FULL RECIPE STYLE */
+.full-recipe .recipe {
+    width: fit-content;
+    margin: auto;
+    /* Grid Areas */
+    gap: 1rem;
+    grid-template-areas: 
+    "image"
+    "name"
+    "prep-time"
+    "difficulty"
+    "ingredients"
+    "instructions";
+}
+
+.full-recipe .recipe .see-more {
+    display: none;
+}
+
+/* RECIPE LIST DISPLAY */
+.recipe-list .recipe {
+    /* Grid Areas */
+    grid-template-areas: 
+    "image"
+    "name"
+    "prep-time"
+    "difficulty"
+    "ingredients"
+    "view-more";
+}
+
+.recipe-list .recipe .instructions {
+    display: none;
 }
 
 /*************************/

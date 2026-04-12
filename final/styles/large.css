@@ -9,13 +9,29 @@
         text-align: left;
     }
 
+    footer {
+        margin-top: 1rem;
+    }
+
     .container, .hero, .navigation ul {
-        max-width: 60rem;
+        max-width: 58rem;
         margin: 0 auto;
+    }
+
+    .hero h2 {
+        margin: 1.5rem;
     }
 
     .hero-search {
         height: 19rem;
         top: 15%;
+    }
+
+    .recipe {
+        flex: 1 1 100%;
+    }
+
+    .recipe-card {
+        scrollbar-width: none;
     }
 }
