@@ -9,7 +9,7 @@ at the end of the CSS. */
     --primary-color: #9dc059;
     --secondary-color: #f3c534;
     --accent-color: #00796b;
-    /* --accent-color-2: #cb5501; */
+    --accent-color-2: #ff9142;
     --text-color: #0d0d0d;
     --main-background: #faf9f6;
     --background-2: #e0e0e0;
@@ -88,6 +88,7 @@ header, footer {
 }
 
 .navigation a {
+    animation: slide-in-left .5s ease-out;
     font-weight: 600;
     display: block;
     padding: .8rem;
@@ -142,6 +143,7 @@ the homepage */
     padding: .5rem;
     display: grid;
     grid-template-columns: auto;
+    border-radius: .8rem;
 }
 
 .hero h2 {
@@ -160,8 +162,14 @@ the homepage */
     padding: .7rem .5rem;
     margin: .2rem 0;
     align-self: baseline;
+    border-radius: .5rem;
+    border: 1px solid var(--text-color);
 }
 
+.hero-search button {
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
 /*********************/
 /* SECTION CONTAINERS*/
 /*********************/
@@ -241,7 +249,7 @@ the homepage */
     grid-area: instructions;
 }
 
-.recipe .see-more {
+.recipe .see-more, .request button {
     grid-area: view-more;
     margin: .5rem 0;
     padding: .5rem;
@@ -298,15 +306,81 @@ the homepage */
     display: none;
 }
 
+/* REQUEST FORM */
+.request {
+    margin: 0 auto;
+    max-width: 40rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--background-2);
+}
+
+.request fieldset {
+    border: none;
+}
+
+.request legend {
+    padding: 1rem 0 .5rem;
+    font-size: 1.5rem;
+}
+
+.request input, .request label, .request textarea, .request button {
+    display: block;
+    width: 100%;
+}
+
+.request label {
+    margin: 1rem 0 .2rem;
+}
+
+.request input, .request textarea {
+    padding: .8rem;
+}
+
+.request button {
+    margin: 1rem 0 0;
+    padding: .8rem;
+}
+
+/* .request textarea {
+
+} */
+
 /*************************/
 /* HOVER & OTHER EFFECTS */
 /*************************/
 .nav-hover:hover, .nav-hover:focus, .navigation .current {
     background-color: var(--secondary-color);
     text-decoration: underline;
+    transition: background-color .3s linear;
 }
 
+.standard-hover:hover, .standard-hover:focus {
+    background-color: var(--accent-color-2);
+    transition: background-color .3s ease-in-out;
+}
 
 /*****************/
-/*  TRANSITIONS  */
+/*  ANIMATIONS  */
 /*****************/
+@keyframes slide-in-up {
+    0% {
+        transform: translateY(30%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 100%;
+    }
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(20%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 100%;
+    }
+}

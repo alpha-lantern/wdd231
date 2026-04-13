@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Favorites</title>
-    <meta name="description" content="Your favorite flavors, all in one place. Access your saved recipes instantly and build your personalized digital cookbook.">
+    <title>Thank You</title>
+    <meta name="description" content="Thanks for your request. We are working hard to make new recipes and bring them to you.">
     <meta name="author" content="Alvin Timaná">
     <!-- SOCIAL MEDIA -->
-    <meta property="og:title" content="Your favorite flavors, all in one place.">
-    <meta property="og:description" content="Your favorite flavors, all in one place. Access your saved recipes instantly and build your personalized digital cookbook.">
+    <meta property="og:title" content="Thanks for the recipe request.">
+    <meta property="og:description" content="Thanks for your request. We are working hard to make new recipes and bring them to you.">
     <meta property="og:image" content="https://alpha-lantern.github.io/wdd231/final/images/og-img.webp">
     <meta property="og:image:alt" content="Webpage preview">
-    <meta property="og:url" content="https://alpha-lantern.github.io/wdd231/final/favorites.html">
+    <meta property="og:url" content="https://alpha-lantern.github.io/wdd231/final/thankyou.html">
     <meta property="og:type" content="website">
     <!-- ICON -->
     <link rel="icon" href="images/favicon.ico">
@@ -27,8 +27,8 @@
     <link rel="stylesheet" href="styles/large.css">
     <!-- SCRIPTS -->
     <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
     <script type="module" src="scripts/dates.mjs"></script>
-    <script type="module" src="scripts/display-favorites.mjs"></script>
 </head>
 <body>
     <!-- HEADER -->
@@ -50,8 +50,9 @@
     <!-- MAIN -->
     <main>
         <section class="container">
-            <h1>My Favorite Recipes</h1>
-            <div class="favorites recipe-list" id="favoriteRecipes"></div>
+            <h1>Thanks For Your Request!</h1>
+            <p id="requestedRecipe"></p>
+            <p id="additional"></p>
         </section>
     </main>
     <!-- FOOTER -->

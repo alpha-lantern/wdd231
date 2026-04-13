@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipes on Easy Taste</title>
-    <meta name="description" content="Explore new recipes, search and find your next meal. Find the most popular, healthy, easier and more recipes in our homepage.">
+    <meta name="description" content="Discover 20+ delicious recipes with a single click. Filter by tags or use our search to find your next favorite meal!">
     <meta name="author" content="Alvin Timaná">
     <!-- SOCIAL MEDIA -->
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="">
+    <meta property="og:title" content="Recipes on Easy Taste, discover delicious recipes.">
+    <meta property="og:description" content="Discover 20+ delicious recipes with a single click. Filter by tags or use our search to find your next favorite meal!">
+    <meta property="og:image" content="https://alpha-lantern.github.io/wdd231/final/images/og-img.webp">
     <meta property="og:image:alt" content="Webpage preview">
-    <meta property="og:url" content="https://alpha-lantern.github.io/wdd231/final/">
+    <meta property="og:url" content="https://alpha-lantern.github.io/wdd231/final/recipes.html">
     <meta property="og:type" content="website">
     <!-- ICON -->
     <link rel="icon" href="images/favicon.ico">
@@ -36,7 +36,6 @@
         <section class="header">
             <img class="logo" src="images/logo.svg" alt="Easy Taste logo" width="1" height="1">
             <h2 class="logo-name">Easy Taste</h2>
-            <!-- <button id="dark-mode" class="dark" aria-label="Dark mode"></button> -->
             <button id="ham-btn" class="hamburger" aria-label="Menu"></button>
         </section>
     </header>
@@ -60,11 +59,11 @@
                 <h2>Find Your Next Meal</h2>
                 <label class="strong" for="byRecipe">Search by Name</label>
                 <input type="text" id="byRecipe" title="Recipe name" name="recipe-name" placeholder="Ex: Banana Pancakes">
-                <button title="Search recipe">Search</button>
+                <button class="standard-hover" title="Search recipe">Search</button>
                 <label class="strong" for="byIngredients">Search by Ingredients</label>
                 <input type="text" id="byIngredients" title="Ingredients you have" name="ingredients" placeholder="Ex: Banana, milk, etc">
                 <input type="text" id="recipeId" name="id" value="" hidden>
-                <button title="Search by the ingredients">Find Dishes</button>
+                <button class="standard-hover" title="Search by the ingredients">Find Dishes</button>
             </form>
         </div>
         <section class="container">
@@ -76,6 +75,21 @@
                 <h2>Explore More Recipes</h2>
                 <div class="recipe-card" id="recipesList"></div>
             </section>
+            </section>
+            <section class="container">
+                <h2>Not Seeing What You're Looking For?</h2>
+                <form action="thankyou.html" id="request" class="request" method="get">
+                    <fieldset>
+                        <legend class="strong">Request a Recipe</legend>
+                        <label for="requestName">Recipe Name*</label>
+                        <input type="text" title="Recipe Name" name="recipe-name" id="requestName" required>
+                        <label for="requestDescription">Brief Description*</label>
+                        <textarea title="Description" name="description" id="requestDescription" rows="4" required></textarea>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" title="email" name="email">
+                        <button class="strong standard-hover">Send Request</button>
+                    </fieldset>
+                </form>
             </section>
         </section>
     </main>

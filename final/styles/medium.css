@@ -8,6 +8,10 @@
         display: block;
     }
 
+    .navigation a {
+        animation: none;
+    }
+
     .navigation ul {
         text-align: center;
         flex-direction: row;
@@ -18,6 +22,7 @@
     }
 
     .hero-search {
+        animation: slide-in-up 1s ease-in-out;
         position: absolute;
         height: 75%;
         top: 7.5%;
@@ -90,5 +95,9 @@
         max-width: 12rem;
         height: auto;
         margin: 0 auto;
+    }
+
+    .favorites .recipe {
+        animation: slide-in-left 1s ease-out;
     }
 }

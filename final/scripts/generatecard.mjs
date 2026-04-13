@@ -82,7 +82,7 @@ export function generateCard(data, container) {
     // Button
     let seeMore = document.createElement('button');
     // seeMore.setAttribute('id', `${data.id}`);
-    seeMore.setAttribute('class', 'see-more button');
+    seeMore.setAttribute('class', 'see-more standard-hover');
     seeMore.setAttribute('onclick', `window.location.href='recipes.html?recipe-name=&ingredients=&id=${data.id}'`);
     seeMore.innerHTML = "<span class='strong'>See Recipe</span>";
 
