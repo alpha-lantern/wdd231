@@ -13,5 +13,5 @@ requestedRecipe.innerHTML = `<span class="strong">Recipe Requested:</span> ${rec
 if (!email) {
     additional.innerHTML = `We'll be working to add this recipe as soon as possible.`;
 } else {
-    additional.innerHTML = `We'll send you an email to "${email}" when it's ready.`;
+    additional.innerHTML = `We'll send an email to "${email}" when it's ready.`;
 }
