@@ -29,6 +29,7 @@
     <script src="scripts/navigation.js" defer></script>
     <script type="module" src="scripts/dates.mjs"></script>
     <script type="module" src="scripts/display-recipes.mjs"></script>
+    <script src="scripts/form-modal.js" defer></script>
 </head>
 <body>
     <!-- HEADER -->
@@ -77,19 +78,23 @@
             </section>
             </section>
             <section class="container">
-                <h2>Not Seeing What You're Looking For?</h2>
-                <form action="thankyou.html" id="request" class="request" method="get">
-                    <fieldset>
-                        <legend class="strong">Request a Recipe</legend>
-                        <label for="requestName">Recipe Name*</label>
-                        <input type="text" title="Recipe Name" name="recipe-name" id="requestName" required>
-                        <label for="requestDescription">Brief Description*</label>
-                        <textarea title="Description" name="description" id="requestDescription" rows="4" required></textarea>
-                        <label for="email">Email</label>
-                        <input type="email" id="email" title="email" name="email">
-                        <button class="strong standard-hover">Send Request</button>
-                    </fieldset>
-                </form>
+                <h2>Can't Find What You're Looking For?</h2>
+                <button class="open-button strong standard-hover" id="requestButton">Request a Recipe</button>
+                <dialog id="formModal" class="modal">
+                    <form action="thankyou.html" id="request" class="request" method="get">
+                        <fieldset>
+                            <legend class="strong">Request a Recipe</legend>
+                            <label for="requestName">Recipe Name*</label>
+                            <input type="text" title="Recipe Name" name="recipe-name" id="requestName" required>
+                            <label for="requestDescription">Brief Description*</label>
+                            <textarea title="Description" name="description" id="requestDescription" rows="4" required></textarea>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" title="email" name="email">
+                            <button class="strong standard-hover">Send Request</button>
+                            <button id="closeButton" class="strong standard-hover close-btn">Close</button>
+                        </fieldset>
+                    </form>
+                </dialog>
             </section>
         </section>
     </main>

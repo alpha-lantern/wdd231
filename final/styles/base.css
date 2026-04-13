@@ -249,7 +249,7 @@ the homepage */
     grid-area: instructions;
 }
 
-.recipe .see-more, .request button {
+.recipe .see-more, .request button, .open-button {
     grid-area: view-more;
     margin: .5rem 0;
     padding: .5rem;
@@ -307,6 +307,10 @@ the homepage */
 }
 
 /* REQUEST FORM */
+.modal {
+    width: 40rem;
+}
+
 .request {
     margin: 0 auto;
     max-width: 40rem;
@@ -342,9 +346,20 @@ the homepage */
     padding: .8rem;
 }
 
-/* .request textarea {
+/* OPEN THE MODAL */
+.open-button {
+    font-size: 1.5rem;
+    display: block;
+    margin: 0 auto;
+    padding: 1rem;
+}
 
-} */
+.modal .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    width: fit-content;
+}
 
 /*************************/
 /* HOVER & OTHER EFFECTS */
