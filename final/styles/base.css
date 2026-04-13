@@ -215,6 +215,8 @@ the homepage */
     grid-area: image;
     width: 100%;
     height: auto;
+    max-width: 250px;
+    margin: 0 auto;
     border-radius: .2rem;
 }
 
@@ -253,7 +255,7 @@ the homepage */
 .recipe .fav-tag {
     position: absolute;
     top: .8rem;
-    right: .5rem;
+    right: 1rem;
     width: 44px;
     height: auto;
     padding: 2px;

@@ -1,3 +1,4 @@
+import { setAsFavorite, eraseFavorite, getFavorites } from "./store-favorites.mjs";
 // Recipe example:
 // "id": 1,
 //     "name": "Classic Avocado Toast",
@@ -9,6 +10,7 @@
 //     "tags": ["Breakfast", "Vegan"]
 // const recipeSearch = document.querySelector('#recipeSearch');
 
+// This function builds the entire card for a recipe, including the functionality of buttons
 export function generateCard(data, container) {
     let card = document.createElement('div');
     card.classList.add('recipe');
@@ -56,13 +58,24 @@ export function generateCard(data, container) {
     // Append Icon to Button
     favMark.appendChild(favIco);
 
+    // Track when the icon is pressed
+    const favoriteStorage = 'favorites';
+
+    let currentFav = getFavorites(favoriteStorage);
+    if (currentFav.includes(data.id)) {
+        card.classList.toggle('favorite');
+        favIco.setAttribute('src', 'images/bookmark-fill.svg');
+    }
+    
     favMark.addEventListener('click', () => {
         card.classList.toggle('favorite');
         if (card.classList.contains('favorite')) {
             favIco.setAttribute('src', 'images/bookmark-fill.svg');
+            setAsFavorite(favoriteStorage, data.id);
         } 
         else {
             favIco.setAttribute('src', 'images/bookmark.svg');
+            eraseFavorite(favoriteStorage, data.id);
         }
     });
 
@@ -83,7 +96,7 @@ export function generateCard(data, container) {
 
     instructionsLbl.innerHTML = `<span class='strong'>Preparation:</span>`;
     // Split the text into an array of steps
-    let instructionSteps = data.instructions.split('. ');
+    let instructionSteps = data.instructions;
     instructionSteps.forEach(step => {
         let instruction = document.createElement('li');
         instruction.textContent = `${step.trim()}`;

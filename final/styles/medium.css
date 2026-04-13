@@ -52,26 +52,21 @@
 
     /* FULL RECIPE STYLE */
     .full-recipe .recipe {
+        max-width: 35rem;
         gap: .5rem 1rem;
         align-items: start;
         /* Grid Areas */
         grid-template-areas: 
-        "image name tag"
-        "image prep-time prep-time"
-        "image difficulty difficulty"
-        "ingredients ingredients ingredients"
-        "instructions instructions instructions";
+        "image name"
+        "image prep-time"
+        "image difficulty"
+        "ingredients ingredients "
+        "instructions instructions";
     }
 
     .full-recipe .recipe .fav-tag {
-        position: relative;
-        top: 0;
-        left: .5rem;
-    }
-
-    .full-recipe .recipe .fav-tag img {
-        width: 2rem;
-        height: auto;
+        top: 1rem;
+        right: 1rem;
     }
 
     .full-recipe .recipe-picture {
