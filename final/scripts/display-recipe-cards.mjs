@@ -8,7 +8,7 @@ const recipes = await apiFetch("./data/recipes.json");
 // console.log(recipes);
 
 const trendRecipes = recipes.recipes.filter(recipe => {
-    return recipe.difficulty.toLowerCase() == "easy"
+    return recipe.difficulty.toLowerCase() == "easy";
 });
 
 const newestRecipes = recipes.recipes.slice(-4);
